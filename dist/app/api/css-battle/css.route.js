@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.cssRoutes = void 0;
+const express_1 = __importDefault(require("express"));
+const css_controller_1 = require("./css.controller");
+const enums_1 = require("../../../generated/prisma/enums");
+const authenticate_jwt_1 = require("../../middlewares/authenticate-jwt");
+const router = express_1.default.Router();
+router.post('/battle/submit', (0, authenticate_jwt_1.authenticateJWT)(...Object.values(enums_1.Role)), css_controller_1.CssControllers.CompareCss);
+router.post('/battle/submit/v2', css_controller_1.CssControllers.CompareCssV2);
+router.get('/battle/:battleNo', (0, authenticate_jwt_1.authenticateJWT)(...Object.values(enums_1.Role)), css_controller_1.CssControllers.getBattleByNo);
+router.post('/collection', (0, authenticate_jwt_1.authenticateJWT)(enums_1.Role.ADMIN), css_controller_1.CssControllers.createCollection);
+router.get('/collection', css_controller_1.CssControllers.getCollections);
+router.get('/collection/:collectionId', (0, authenticate_jwt_1.authenticateJWT)(...Object.values(enums_1.Role)), css_controller_1.CssControllers.getCollectionById);
+router.post('/battle', (0, authenticate_jwt_1.authenticateJWT)(enums_1.Role.ADMIN), css_controller_1.CssControllers.createBattle);
+router.delete('/collection/:collectionId', (0, authenticate_jwt_1.authenticateJWT)(enums_1.Role.ADMIN), css_controller_1.CssControllers.deleteCollection);
+router.delete('/battle/:battleId', (0, authenticate_jwt_1.authenticateJWT)(enums_1.Role.ADMIN), css_controller_1.CssControllers.deleteBattle);
+router.get('/battles', (0, authenticate_jwt_1.authenticateJWT)(...Object.values(enums_1.Role)), css_controller_1.CssControllers.getBattles);
+exports.cssRoutes = router;
