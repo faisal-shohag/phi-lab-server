@@ -24,7 +24,7 @@ app.use((0, cors_1.default)({
 app.use("/api/v1", routes_1.router);
 app.get("/", (req, res) => {
     res.status(200).json({
-        message: "🚀 Welcome to Phi-Lab Server!"
+        "🚀": "Welcome to Phi-Lab Server!"
     });
 });
 app.use(global_error_handler_1.globalErrorHandler);
