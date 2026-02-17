@@ -1,0 +1,568 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+  BLOCKED
+}
+
+enum AuthType {
+  credential
+  google
+  github
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  username  String?   @unique
+  password  String? // null if registered via OTP only or social login
+  picture   String?
+  name      String?
+  googleId  String?   @unique
+  githubId  String?   @unique
+  authType  AuthType?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  otps          OTP[]
+  role          Role           @default(USER)
+  status        Status         @default(ACTIVE)
+  refreshTokens RefreshToken[]
+
+  // profile info
+  bio         String?
+  location    String?
+  website     String?
+  twitter     String?
+  github      String?
+  linkedin    String?
+  facebook    String?
+  instagram   String?
+  discord     String?
+  youtube     String?
+  profession  String?
+  company     String?
+  skills      String[]       @default([])
+  interests   String[]       @default([])
+
+  battleSubmissions     BattleSubmission[]
+  globalLeaderboard     GlobalLeaderboard?
+  collectionLeaderboard CollectionLeaderboard[]
+  battleLeaderboard     BattleLeaderboard[]
+  acitivity             UserDailyActivity[]
+  dailyStreak           UserStreak[]
+  battleSubmissionCount Int                     @default(0)
+
+  // JS
+  created_problems   Problem[]
+  submissions        Submission[]
+  editorial          Editorial[]
+  solutions          UserSolution[]
+  jsLeaderboard      JsGlobalLeaderboard[]
+  userProgress       UserSeriesProblemProgress[]
+  userSeriesProgress UserSeriesProgress[]
+  jsSubmissionCount  Int                         @default(0)
+}
+
+model OTP {
+  id        String   @id @default(uuid())
+  user      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  email     String   @unique
+  codeHash  String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String   @unique
+  tokenHash String
+  revoked   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+}
+
+//JAVSCRIPT CODING CHALLANGE SCHEMA
+// =========================
+// ENUMS
+// =========================
+
+enum DifficultyLevel {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum ProblemCollectionType {
+  SERIES
+  SINGLE
+  NFx
+  Fx
+  QUIZ
+  LESSON
+}
+
+enum ProblemType {
+  NFx
+  Fx
+}
+
+// =========================
+// PROBLEM CORE
+// =========================
+
+model Problem {
+  id             Int                    @id @default(autoincrement())
+  title          String
+  slug           String                 @unique
+  unique_title   String                 @unique
+  difficulty     DifficultyLevel
+  serial         Int
+  userId         String
+  isPublish      Boolean                @default(false)
+  rating         Int                    @default(0)
+  collectionType ProblemCollectionType?
+  problemType    ProblemType?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  timeLimit Int      @default(1000)
+  memoryLimit Int   @default(1024)
+
+  // Relations
+  content                   ProblemContent?
+  submissions               Submission[]
+  solutions                 UserSolution[]
+  editorials                Editorial[]
+  tags                      TagsOnProblems[]
+  author                    User                        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jsSeriesProblems          JsSeriesProblem[]
+  userSeriesProblemProgress UserSeriesProblemProgress[]
+
+  @@index([difficulty])
+  @@index([serial])
+}
+
+model Tag {
+  id       Int              @id @default(autoincrement())
+  name     String           @unique
+  problems TagsOnProblems[]
+}
+
+model TagsOnProblems {
+  problemId Int
+  tagId     Int
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  tag     Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([problemId, tagId])
+  @@index([tagId])
+  @@index([problemId])
+}
+
+// =========================
+// PROBLEM CONTENT (All heavy data in JSON)
+// =========================
+
+model ProblemContent {
+  problemId      Int     @id
+  description    String
+  bn_description String?
+
+  defaultCode    Json // per language if needed
+  func           String?
+  readOnlyLines Json     @default("[]")
+
+  // JSON testcases
+  // { run: [...], submit: [...] }
+  testcasesJson Json
+
+  // Hints inside JSON
+  // ["hint1", "hint2", ...]
+  hintsJson Json?
+
+  // Companies inside JSON
+  // ["Google", "Meta", "Amazon", ...]
+  companiesJson Json?
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+}
+
+// =========================
+// USER-SHARED SOLUTIONS
+// =========================
+
+model UserSolution {
+  id        Int      @id @default(autoincrement())
+  problemId Int
+  userId    String
+  code      String
+  language  String
+  createdAt DateTime @default(now())
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([problemId])
+  @@index([userId])
+}
+
+// =========================
+// EDITORIALS (User-owned)
+// =========================
+
+model Editorial {
+  id        Int      @id @default(autoincrement())
+  content   String
+  problemId Int
+  userId    String
+  createdAt DateTime @default(now())
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([problemId])
+  @@index([userId])
+}
+
+// =========================
+// SUBMISSIONS (ONLY ONE per user + problem)
+// =========================
+
+model Submission {
+  id              Int      @id @default(autoincrement())
+  status          String
+  date            DateTime @default(now())
+  percentage      Float?
+  language        String
+  runtime         Float?
+  memory          Float?
+  totalPassed     Float?
+  totaltc         Float?
+  submissionCount Int      @default(0)
+  points          Float    @default(0)
+
+  code String
+  tc   Json?
+
+  problemId Int
+  userId    String
+
+  problem Problem @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Only one unique submission per user & problem
+  @@unique([userId, problemId])
+  @@index([problemId])
+  @@index([userId])
+  @@index([date])
+  @@index([status])
+}
+
+model JsGlobalLeaderboard {
+  id          Int    @id @default(autoincrement())
+  userId      String @unique
+  solvedCount Int    @default(0) // Number of problems fully solved (100% passed)
+  totalPoints Float  @default(0.0) // Sum of all points earned across problems
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([totalPoints(sort: Desc)])
+  @@index([solvedCount(sort: Desc)])
+  @@index([userId])
+}
+
+///=========================
+// JS Series - Improved for Progress Tracking
+//======================
+
+model JsSeries {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String?
+  picture     String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  jsSeriesProblems JsSeriesProblem[]
+  jsSeriesBadges   JsSeriesBadge[]
+
+  // For quick access to user progress (optional but recommended)
+  userProgress              UserSeriesProgress[]
+  userSeriesProblemProgress UserSeriesProblemProgress[]
+}
+
+enum SeriesProblemCat {
+  GettingStarted
+  STRING
+  ARRAY
+  LOOP
+  CONDITIONAL
+  OBJECT
+  FUNCTIONAL
+  MATH
+  DEBUG
+  ALGORITHM
+  DATA_STRUCTURE
+  OOP
+  RECURSION
+}
+
+model JsSeriesProblem {
+  id        Int               @id @default(autoincrement())
+  seriesId  Int
+  problemId Int
+  order     Int
+  category  SeriesProblemCat?
+  jsSeries  JsSeries          @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  problem   Problem           @relation(fields: [problemId], references: [id], onDelete: Cascade)
+
+  // Progress tracking for users
+  userProgress UserSeriesProblemProgress[]
+
+  @@unique([seriesId, problemId])
+  @@unique([category, order]) 
+  @@index([seriesId])
+  @@index([problemId])
+  @@index([seriesId, order])
+}
+
+model JsSeriesBadge {
+  id       Int    @id @default(autoincrement())
+  seriesId Int
+  badgeUrl String
+  title    String
+
+  jsSeries JsSeries @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@index([seriesId])
+}
+
+// ====================
+// User Progress in Series
+// ====================
+
+// Detailed progress: which specific problems in a series has the user solved?
+model UserSeriesProblemProgress {
+  id        Int    @id @default(autoincrement())
+  userId    String
+  seriesId  Int
+  problemId Int
+
+  isCompleted Boolean
+  completedAt DateTime @default(now())
+
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series        JsSeries        @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  problem       Problem         @relation(fields: [problemId], references: [id], onDelete: Cascade)
+  seriesProblem JsSeriesProblem @relation(fields: [seriesId, problemId], references: [seriesId, problemId])
+
+  @@unique([userId, seriesId, problemId])
+  @@index([userId, seriesId])
+  @@index([seriesId])
+  @@index([problemId])
+}
+
+// Summary progress: fast lookup for "User X has solved Y/Z problems in Series A"
+model UserSeriesProgress {
+  id           Int      @id @default(autoincrement())
+  userId       String
+  seriesId     Int
+  solvedCount  Int      @default(0)
+  lastSolvedAt DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series       JsSeries @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, seriesId])
+  @@index([userId])
+  @@index([seriesId])
+}
+
+//============================
+
+// CSS BATTLE SCHEMA
+model BattleCollection {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  picture     String?
+  battles     Battle[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  collectionLeaderboard CollectionLeaderboard[]
+}
+
+model Battle {
+  id          Int            @id @default(autoincrement())
+  battleNo    Int            @unique
+  title       String
+  size        Json?
+  target      String
+  colors      BattleColors[]
+  assets      BattleAssets[]
+  description String?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  collectionId Int?
+  battle       BattleCollection? @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+
+  battleSubmissions BattleSubmission[]
+  battleLeaderboard BattleLeaderboard[]
+
+  @@index([collectionId])
+  @@index([title])
+}
+
+model BattleAssets {
+  id          Int      @id @default(autoincrement())
+  title       String?
+  description String?
+  url         String
+  createdAt   DateTime @default(now())
+  battleId    Int
+  battle      Battle   @relation(fields: [battleId], references: [id], onDelete: Cascade)
+}
+
+model BattleColors {
+  id       Int    @id @default(autoincrement())
+  code     String
+  battleId Int
+  battle   Battle @relation(fields: [battleId], references: [id], onDelete: Cascade)
+}
+
+//
+// ---------------------------------------------------------------------------
+// 🎯 User Submissions & Scores
+// ---------------------------------------------------------------------------
+//
+
+model BattleSubmission {
+  id              Int    @id @default(autoincrement())
+  user            User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String
+  battle          Battle @relation(fields: [battleId], references: [id], onDelete: Cascade)
+  battleId        Int
+  highScore       Float?
+  highScoreCode   String
+  highAccuracy    Float?
+  code            String
+  score           Float // this is the score of THIS submission
+  accuracy        Float
+  submissionCount Int    @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, battleId])
+  @@index([battleId])
+  @@index([userId, battleId])
+}
+
+//
+// ---------------------------------------------------------------------------
+// 🏆 LEADERBOARD MODELS
+// ---------------------------------------------------------------------------
+//
+
+// GLOBAL LEADERBOARD — across all battles
+model GlobalLeaderboard {
+  id Int @id @default(autoincrement())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @unique // each user appears once
+
+  score Float @default(0) // final ranking score
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@index([score(sort: Desc)])
+}
+
+// COLLECTION LEADERBOARD — per Collection
+model CollectionLeaderboard {
+  id Int @id @default(autoincrement())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  collection   BattleCollection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  collectionId Int
+
+  score Float @default(0)
+  avg_accuracy Float @default(0)
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@unique([userId, collectionId]) // only one score per user per collection
+}
+
+// BATTLE LEADERBOARD — per Battle
+model BattleLeaderboard {
+  id Int @id @default(autoincrement())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  battle   Battle @relation(fields: [battleId], references: [id], onDelete: Cascade)
+  battleId Int
+
+  score Float @default(0)
+  accuracy Float @default(0)
+
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@unique([userId, battleId]) // only one score per user per battle
+  @@index([battleId])
+  @@index([score])
+}
+
+model UserDailyActivity {
+  id     BigInt      @id @default(autoincrement())
+  userId String
+  date   DateTime @db.Date // only the date, no time (e.g. 2025-04-05)
+  activityCount Int  @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date]) 
+   @@index([userId, date])
+}
+
+model UserStreak {
+  id     BigInt    @id @default(autoincrement())
+  userId String     @unique
+
+  currentStreak  Int       @default(0)
+  longestStreak  Int       @default(0)
+  lastActiveDate DateTime? @db.Date
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+
+}
