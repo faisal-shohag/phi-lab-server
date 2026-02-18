@@ -26,7 +26,8 @@ export const getIssueByIdController = (req: Request, res: Response) => {
 
 //search issue
 export const searchIssueController = (req: Request, res: Response) => {
-  const searchTerm = req.query.q;
+  let searchTerm = req.query.q;
+  searchTerm = searchTerm?.toString()?.toLowerCase();
   const issues = gitIssues.filter((issue) => {
     return (
       searchTerm &&

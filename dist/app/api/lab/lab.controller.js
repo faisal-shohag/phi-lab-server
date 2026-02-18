@@ -26,7 +26,9 @@ exports.getIssueByIdController = getIssueByIdController;
 //       !issue.description.toLowerCase().includes(searchTerm)
 //search issue
 const searchIssueController = (req, res) => {
-    const searchTerm = req.query.q;
+    var _a;
+    let searchTerm = req.query.q;
+    searchTerm = (_a = searchTerm === null || searchTerm === void 0 ? void 0 : searchTerm.toString()) === null || _a === void 0 ? void 0 : _a.toLowerCase();
     const issues = git_issue_data_1.gitIssues.filter((issue) => {
         return (searchTerm &&
             (issue.title.toLowerCase().includes(searchTerm) ||
