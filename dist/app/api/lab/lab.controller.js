@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.gitIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
+exports.gitIssueController = exports.searchIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
 const git_issue_data_1 = require("./const/git-issue-data");
 const gitAllIssueController = (req, res) => {
-    res.status(200).json({
+    return res.status(200).json({
         status: "success",
         message: "Issues fetched successfully",
         data: git_issue_data_1.gitIssues,
@@ -12,15 +12,36 @@ const gitAllIssueController = (req, res) => {
 exports.gitAllIssueController = gitAllIssueController;
 const getIssueByIdController = (req, res) => {
     const { id } = req.params;
-    const issue = git_issue_data_1.gitIssues.find(issue => issue.id === Number(id));
-    res.status(200).json({
+    const issue = git_issue_data_1.gitIssues.find((issue) => issue.id === Number(id));
+    return res.status(200).json({
         status: "success",
         message: "Issue fetched successfully",
         data: issue,
     });
 };
 exports.getIssueByIdController = getIssueByIdController;
+//search
+//  searchTerm &&
+//       !issue.title.toLowerCase().includes(searchTerm) &&
+//       !issue.description.toLowerCase().includes(searchTerm)
+//search issue
+const searchIssueController = (req, res) => {
+    const searchTerm = req.query.q;
+    const issues = git_issue_data_1.gitIssues.filter((issue) => {
+        return (searchTerm &&
+            (issue.title.toLowerCase().includes(searchTerm) ||
+                issue.description.toLowerCase().includes(searchTerm)));
+    });
+    return res.status(200).json({
+        status: "success",
+        message: "Issues searched successfully",
+        total: issues.length,
+        data: issues,
+    });
+};
+exports.searchIssueController = searchIssueController;
 exports.gitIssueController = {
     gitAllIssueController: exports.gitAllIssueController,
-    getIssueByIdController: exports.getIssueByIdController
+    getIssueByIdController: exports.getIssueByIdController,
+    searchIssueController: exports.searchIssueController,
 };

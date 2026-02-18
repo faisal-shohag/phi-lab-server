@@ -1,28 +1,50 @@
 import { Request, Response } from "express";
 import { gitIssues } from "./const/git-issue-data";
 
-export const gitAllIssueController = (req:Request, res: Response) => {
-    res.status(200).json({
-        status: "success",
-        message: "Issues fetched successfully",
-        data: gitIssues,
-    })
-}
+export const gitAllIssueController = (req: Request, res: Response) => {
+  return res.status(200).json({
+    status: "success",
+    message: "Issues fetched successfully",
+    data: gitIssues,
+  });
+};
 
-export const getIssueByIdController = (req:Request, res: Response) => {
-    const { id } = req.params
-    const issue = gitIssues.find(issue => issue.id === Number(id))
-    res.status(200).json({
-        status: "success",
-        message: "Issue fetched successfully",
-        data:issue, 
-    })
-}
+export const getIssueByIdController = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const issue = gitIssues.find((issue) => issue.id === Number(id));
+  return res.status(200).json({
+    status: "success",
+    message: "Issue fetched successfully",
+    data: issue,
+  });
+};
 
+//search
+//  searchTerm &&
+//       !issue.title.toLowerCase().includes(searchTerm) &&
+//       !issue.description.toLowerCase().includes(searchTerm)
 
+//search issue
+export const searchIssueController = (req: Request, res: Response) => {
+  const searchTerm = req.query.q;
+  const issues = gitIssues.filter((issue) => {
+    return (
+      searchTerm &&
+      (issue.title.toLowerCase().includes(searchTerm as string) ||
+        issue.description.toLowerCase().includes(searchTerm as string))
+    );
+  });
 
+  return res.status(200).json({
+    status: "success",
+    message: "Issues searched successfully",
+    total: issues.length,
+    data: issues,
+  });
+};
 
 export const gitIssueController = {
-    gitAllIssueController,
-    getIssueByIdController
-}
+  gitAllIssueController,
+  getIssueByIdController,
+  searchIssueController,
+};
