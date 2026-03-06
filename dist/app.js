@@ -17,7 +17,7 @@ app.use(express_1.default.json());
 app.set("trust proxy", 1);
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: true,
     credentials: true
 }));
 //["http://localhost:5173", "https://f-code.vercel.app", "https://fcode.online"]
