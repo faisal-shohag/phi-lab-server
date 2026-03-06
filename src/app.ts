@@ -7,16 +7,17 @@ import { globalErrorHandler } from "./app/middlewares/global-error-handler";
 import notFound from "./app/middlewares/not-found";
 
 const app = express()
+app.use(cors({
+    origin: true,
+    credentials: true
+}))
 
 app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(express.json())
 app.set("trust proxy", 1);
 app.use(express.urlencoded({ extended: true }))
-app.use(cors({
-    origin: true,
-    credentials: true
-}))
+
 
 //["http://localhost:5173", "https://f-code.vercel.app", "https://fcode.online"]
 
