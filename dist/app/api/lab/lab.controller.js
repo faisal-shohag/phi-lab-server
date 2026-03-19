@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.gitIssueController = exports.searchIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
+exports.foodController = exports.gitIssueController = exports.topFoodsController = exports.searchIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
 const git_issue_data_1 = require("./const/git-issue-data");
+const food_data_1 = require("./const/food-data");
 const gitAllIssueController = (req, res) => {
     return res.status(200).json({
         status: "success",
@@ -42,8 +43,19 @@ const searchIssueController = (req, res) => {
     });
 };
 exports.searchIssueController = searchIssueController;
+const topFoodsController = (req, res) => {
+    return res.status(200).json({
+        status: "success",
+        message: "Issues fetched successfully",
+        data: food_data_1.topFoods,
+    });
+};
+exports.topFoodsController = topFoodsController;
 exports.gitIssueController = {
     gitAllIssueController: exports.gitAllIssueController,
     getIssueByIdController: exports.getIssueByIdController,
     searchIssueController: exports.searchIssueController,
+};
+exports.foodController = {
+    topFoodsController: exports.topFoodsController
 };

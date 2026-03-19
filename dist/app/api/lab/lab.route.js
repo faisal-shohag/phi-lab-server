@@ -10,5 +10,7 @@ const router = express_1.default.Router();
 router.get('/issues', lab_controller_1.gitIssueController.gitAllIssueController);
 router.get('/issue/:id', lab_controller_1.gitIssueController.getIssueByIdController);
 router.get('/issues/search', lab_controller_1.gitIssueController.searchIssueController);
+//
+router.get('/foods/top-foods', lab_controller_1.foodController.topFoodsController);
 exports.default = router;
 exports.labRoute = router;
