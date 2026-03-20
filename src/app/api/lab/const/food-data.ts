@@ -27,7 +27,7 @@ export const topFoods = [
       fat: "20-30 g",
       fiber: "5-8 g",
     },
-    rating: 5.00,
+    rating: 5.0,
     price: 300,
     possible_price_in_dhaka: {
       home_cooked: "BDT 150-300",
@@ -73,8 +73,8 @@ export const topFoods = [
       fat: "10-20 g",
       fiber: "4-7 g",
     },
-        rating: 4.9,
-      "price": 350,
+    rating: 4.9,
+    price: 350,
     possible_price_in_dhaka: {
       home_cooked: "BDT 180-350",
       street_food_or_small_restaurant: "BDT 300-500",
@@ -122,8 +122,8 @@ export const topFoods = [
       fat: "40-55 g (from meat, cheese, oil)",
       fiber: "3-6 g",
     },
-        rating: 5.00,
-      "price": 450,
+    rating: 5.0,
+    price: 450,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 250-450 (beef/mutton mince + cheese + tomatoes affordable locally)",
@@ -174,8 +174,8 @@ export const topFoods = [
       fat: "15-30 g (from breading and any oil)",
       fiber: "8-12 g (high thanks to abundant veggies)",
     },
-        rating: 5.00,
-      "price": 250,
+    rating: 5.0,
+    price: 250,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 150-300 (chicken breast + veggies very affordable locally)",
@@ -226,8 +226,8 @@ export const topFoods = [
       fat: "25-40 g (healthy fats from fish and olive oil)",
       fiber: "6-10 g",
     },
-        rating: 4.5,
-      "price": 500,
+    rating: 4.5,
+    price: 500,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 300-500 (fish like salmon/rui/katla + veggies; imported salmon pricier)",
@@ -279,8 +279,8 @@ export const topFoods = [
       fat: "35-50 g (from glaze, salmon, eggs, frying)",
       fiber: "8-12 g (veggies help balance)",
     },
-        rating: 4.8,
-      "price": 400,
+    rating: 4.8,
+    price: 400,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 400-700 (meat + salmon + eggs + veggies; imported salmon raises cost)",
@@ -331,8 +331,8 @@ export const topFoods = [
       fat: "15-25 g (from grilling and any oil)",
       fiber: "6-10 g (high from fresh veggies)",
     },
-        rating: 5.00,
-      "price": 200,
+    rating: 5.0,
+    price: 200,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 200-400 (Beef/tofu + rice + local veggies affordable; tofu cheaper option)",
@@ -384,8 +384,8 @@ export const topFoods = [
       fat: "25-40 g (from frying, ghee/oil in curries)",
       fiber: "10-15 g (high from diverse vegetables)",
     },
-        rating: 5.00,
-      "price": 600,
+    rating: 5.0,
+    price: 600,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 300-600 (using local seasonal veggies, rice, paneer/tofu affordable)",
@@ -434,8 +434,8 @@ export const topFoods = [
       fat: "10-20 g (healthy fats from olive oil/shrimp)",
       fiber: "5-9 g (good from abundant fresh produce)",
     },
-        rating: 4.7,
-      "price": 250,
+    rating: 4.7,
+    price: 250,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 250-500 (shrimp/prawns ~BDT 300-600/kg locally, veggies cheap)",
@@ -487,8 +487,8 @@ export const topFoods = [
       fat: "25-40 g (from paneer fat, oil, yogurt)",
       fiber: "2-5 g",
     },
-        rating: 4.9,
-      "price": 400,
+    rating: 4.9,
+    price: 400,
     possible_price_in_dhaka: {
       home_cooked:
         "BDT 200-400 (paneer ~BDT 400-600/kg locally, spices/veggies cheap)",
