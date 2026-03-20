@@ -42,7 +42,7 @@ export const topFoods = [
     "Toss the chopped vegetables lightly with olive oil, lemon juice, salt, pepper, and chopped fresh herbs.",
     "Assemble the bowl: Place a bed of warm rice, top with grilled chicken drumstick(s), scatter the fresh veggie salad over everything, and garnish with extra herbs or a lemon wedge."
   ],
-  "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919051/foods/672baf2f-8c93-4d9f-a255-f097b77fc8dc.png"
+  "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773986441/foods/672baf2f-8c93-4d9f-a255-f097b77fc8dc.png"
 },
 {
   "id": "food_002",
@@ -172,7 +172,7 @@ export const topFoods = [
     "Assemble the plate: Place the crispy chicken piece inside/ on the bell pepper half. Arrange surrounding veggies attractively around the plate for color and fun (group by type or make patterns).",
     "Finish: Optional light drizzle of olive oil, lemon juice, or yogurt dressing. Serve immediately for maximum crispiness—great with a side dip like ketchup or ranch for kids!"
   ],
-  "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919258/foods/903c138d-e103-4487-8ebd-44dd91ac9338.png"
+  "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773986501/foods/903c138d-e103-4487-8ebd-44dd91ac9338.png"
 },
 {
   "id": "food_005",
