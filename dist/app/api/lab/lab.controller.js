@@ -47,7 +47,7 @@ const topFoodsController = (req, res) => {
     return res.status(200).json({
         status: "success",
         message: "Issues fetched successfully",
-        data: food_data_1.foods.slice(1, 4),
+        data: food_data_1.foods.slice(0, 4),
     });
 };
 exports.topFoodsController = topFoodsController;
