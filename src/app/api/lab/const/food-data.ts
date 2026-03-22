@@ -1,4 +1,4 @@
-export const topFoods = [
+export const foods = [
   {
     id: "food_001",
     dish_name: "Grilled Chicken Rice Bowl with Fresh Veggie Salad",

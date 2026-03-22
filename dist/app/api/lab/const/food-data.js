@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.topFoods = void 0;
-exports.topFoods = [
+exports.foods = void 0;
+exports.foods = [
     {
         id: "food_001",
         dish_name: "Grilled Chicken Rice Bowl with Fresh Veggie Salad",

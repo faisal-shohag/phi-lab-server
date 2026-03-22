@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.foodController = exports.gitIssueController = exports.singleFoodController = exports.topFoodsController = exports.searchIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
+exports.foodController = exports.gitIssueController = exports.allFoodController = exports.singleFoodController = exports.topFoodsController = exports.searchIssueController = exports.getIssueByIdController = exports.gitAllIssueController = void 0;
 const git_issue_data_1 = require("./const/git-issue-data");
 const food_data_1 = require("./const/food-data");
 const gitAllIssueController = (req, res) => {
@@ -47,13 +47,13 @@ const topFoodsController = (req, res) => {
     return res.status(200).json({
         status: "success",
         message: "Issues fetched successfully",
-        data: food_data_1.topFoods,
+        data: food_data_1.foods.slice(1, 4),
     });
 };
 exports.topFoodsController = topFoodsController;
 const singleFoodController = (req, res) => {
     const { id } = req.params;
-    const food = food_data_1.topFoods.find((food) => food.id === id);
+    const food = food_data_1.foods.find((food) => food.id === id);
     return res.status(200).json({
         status: "success",
         message: "Food fetched successfully",
@@ -61,6 +61,15 @@ const singleFoodController = (req, res) => {
     });
 };
 exports.singleFoodController = singleFoodController;
+//all foods
+const allFoodController = (req, res) => {
+    return res.status(200).json({
+        status: "success",
+        message: "Foods fetched successfully",
+        data: food_data_1.foods,
+    });
+};
+exports.allFoodController = allFoodController;
 exports.gitIssueController = {
     gitAllIssueController: exports.gitAllIssueController,
     getIssueByIdController: exports.getIssueByIdController,

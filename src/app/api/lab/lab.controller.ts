@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { gitIssues } from "./const/git-issue-data";
-import { topFoods } from "./const/food-data";
+import { foods } from "./const/food-data";
 
 export const gitAllIssueController = (req: Request, res: Response) => {
   return res.status(200).json({
@@ -50,17 +50,26 @@ export const topFoodsController = (req: Request, res: Response) => {
    return res.status(200).json({
     status: "success",
     message: "Issues fetched successfully",
-    data: topFoods,
+    data: foods.slice(1, 4),
   });
 }
 
 export const singleFoodController = (req: Request, res: Response) =>{
     const { id } = req.params;
-    const food = topFoods.find((food) => food.id === id)
+    const food = foods.find((food) => food.id === id)
     return res.status(200).json({
       status: "success",
       message: "Food fetched successfully",
       data: food,
+    })
+}
+
+//all foods
+export const allFoodController = (req: Request, res: Response) =>{
+    return res.status(200).json({
+      status: "success",
+      message: "Foods fetched successfully",
+      data: foods,
     })
 }
 
