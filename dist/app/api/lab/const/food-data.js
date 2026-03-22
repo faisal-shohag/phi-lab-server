@@ -3,14 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.topFoods = void 0;
 exports.topFoods = [
     {
-        "id": "food_001",
-        "dish_name": "Grilled Chicken Rice Bowl with Fresh Veggie Salad",
-        "alternative_names": [
+        id: "food_001",
+        dish_name: "Grilled Chicken Rice Bowl with Fresh Veggie Salad",
+        alternative_names: [
             "Mediterranean Chicken Rice Plate",
             "Chicken Rice Power Bowl",
-            "Grilled Chicken over Rice with Cucumber Tomato Salad"
+            "Grilled Chicken over Rice with Cucumber Tomato Salad",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Cooked rice (basmati or long-grain)",
             "Grilled chicken drumstick (skin-on)",
             "Cucumber (cubed/sliced)",
@@ -21,41 +21,43 @@ exports.topFoods = [
             "Olive oil",
             "Lemon juice",
             "Garlic",
-            "Salt, pepper, herbs (oregano/paprika)"
+            "Salt, pepper, herbs (oregano/paprika)",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "550-750 kcal",
-            "protein": "35-45 g",
-            "carbohydrates": "60-80 g",
-            "fat": "20-30 g",
-            "fiber": "5-8 g"
+        approximate_nutrition_per_serving: {
+            calories: "550-750 kcal",
+            protein: "35-45 g",
+            carbohydrates: "60-80 g",
+            fat: "20-30 g",
+            fiber: "5-8 g",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 150-300",
-            "street_food_or_small_restaurant": "BDT 250-450",
-            "cafe_or_healthy_eatery": "BDT 400-700"
+        rating: 5.0,
+        price: 300,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 150-300",
+            street_food_or_small_restaurant: "BDT 250-450",
+            cafe_or_healthy_eatery: "BDT 400-700",
         },
-        "cuisine": "Mediterranean-inspired (with Greek/Middle Eastern influences)",
-        "origin_and_popularity": "Popular in US, Europe, Australia; commonly adapted in urban South Asia including Bangladesh as a healthy bowl meal",
-        "cooking_steps": [
+        cuisine: "Mediterranean-inspired (with Greek/Middle Eastern influences)",
+        origin_and_popularity: "Popular in US, Europe, Australia; commonly adapted in urban South Asia including Bangladesh as a healthy bowl meal",
+        cooking_steps: [
             "Marinate chicken drumsticks with olive oil, minced garlic, paprika, oregano, lemon juice, salt, and pepper (30 minutes to overnight for best flavor).",
             "Cook rice in water or broth with a pinch of salt (optional: add turmeric or butter for color and flavor). Fluff and set aside.",
             "Grill the marinated chicken (grill pan, oven at 200°C, or outdoor grill) for 20-30 minutes, turning occasionally, until charred outside and internal temperature reaches 75°C.",
             "Prepare fresh veggies: dice/slice cucumber, halve cherry tomatoes, slice red onion, cube bell pepper.",
             "Toss the chopped vegetables lightly with olive oil, lemon juice, salt, pepper, and chopped fresh herbs.",
-            "Assemble the bowl: Place a bed of warm rice, top with grilled chicken drumstick(s), scatter the fresh veggie salad over everything, and garnish with extra herbs or a lemon wedge."
+            "Assemble the bowl: Place a bed of warm rice, top with grilled chicken drumstick(s), scatter the fresh veggie salad over everything, and garnish with extra herbs or a lemon wedge.",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919051/foods/672baf2f-8c93-4d9f-a255-f097b77fc8dc.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773986441/foods/672baf2f-8c93-4d9f-a255-f097b77fc8dc.png",
     },
     {
-        "id": "food_002",
-        "dish_name": "Grilled Lemon Basil Chicken with Rice and Tomato Salad",
-        "alternative_names": [
+        id: "food_002",
+        dish_name: "Grilled Lemon Basil Chicken with Rice and Tomato Salad",
+        alternative_names: [
             "Lemon Herb Grilled Chicken Breast Plate",
             "Basil Chicken Rice Bowl with Fresh Tomatoes",
-            "Mediterranean Lemon Chicken and Rice"
+            "Mediterranean Lemon Chicken and Rice",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Grilled chicken breast (boneless, skinless or lightly seasoned)",
             "Cooked white rice (jasmine or basmati, plain or lightly herbed)",
             "Cherry tomatoes (halved)",
@@ -63,40 +65,42 @@ exports.topFoods = [
             "Lemon (wedge or juice for brightness)",
             "Olive oil or light dressing",
             "Chopped chives or green onions (as garnish on rice)",
-            "Seasonings: garlic, salt, pepper, possibly Italian herbs or lemon zest in marinade"
+            "Seasonings: garlic, salt, pepper, possibly Italian herbs or lemon zest in marinade",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "450-650 kcal",
-            "protein": "40-50 g",
-            "carbohydrates": "50-70 g",
-            "fat": "10-20 g",
-            "fiber": "4-7 g"
+        approximate_nutrition_per_serving: {
+            calories: "450-650 kcal",
+            protein: "40-50 g",
+            carbohydrates: "50-70 g",
+            fat: "10-20 g",
+            fiber: "4-7 g",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 180-350",
-            "street_food_or_small_restaurant": "BDT 300-500",
-            "cafe_or_healthy_eatery": "BDT 450-800"
+        rating: 4.9,
+        price: 350,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 180-350",
+            street_food_or_small_restaurant: "BDT 300-500",
+            cafe_or_healthy_eatery: "BDT 450-800",
         },
-        "cuisine": "Mediterranean-inspired / Modern Healthy / Fusion (lemon-herb grilled style with Italian influences from basil and tomatoes)",
-        "origin_and_popularity": "Popular in US, Europe, and Australia as a light, summery healthy bowl; common in global fusion cafes, meal prep trends, and urban spots in Bangladesh (e.g., healthy eateries in Gulshan, Banani, or delivery apps)",
-        "cooking_steps": [
+        cuisine: "Mediterranean-inspired / Modern Healthy / Fusion (lemon-herb grilled style with Italian influences from basil and tomatoes)",
+        origin_and_popularity: "Popular in US, Europe, and Australia as a light, summery healthy bowl; common in global fusion cafes, meal prep trends, and urban spots in Bangladesh (e.g., healthy eateries in Gulshan, Banani, or delivery apps)",
+        cooking_steps: [
             "Marinate the chicken: Combine olive oil, lemon juice/zest, minced garlic, chopped fresh basil, salt, pepper, and optional herbs (e.g., oregano or Italian seasoning). Coat 2-4 boneless chicken breasts and let sit 20-60 minutes (or overnight).",
             "Cook the rice: Rinse 1-1.5 cups white rice (jasmine/basmati). Cook in water or broth with a pinch of salt until fluffy. Optionally add a bit of butter or herbs for extra flavor. Fluff and set aside.",
             "Grill or pan-sear the chicken: Heat a grill pan, skillet, or outdoor grill to medium-high. Cook chicken 5-7 minutes per side until golden, charred marks appear, and internal temperature reaches 75°C (165°F). Rest 5 minutes, then slice if desired.",
             "Prepare fresh elements: Halve cherry tomatoes, tear or chiffonade fresh basil leaves, cut lemon into wedges.",
-            "Assemble the plate: Serve a portion of warm rice (garnished with chopped chives or herbs), place grilled chicken beside or on top, scatter tomatoes and basil around, add lemon wedge for squeezing. Drizzle lightly with olive oil or a simple lemon vinaigrette if desired."
+            "Assemble the plate: Serve a portion of warm rice (garnished with chopped chives or herbs), place grilled chicken beside or on top, scatter tomatoes and basil around, add lemon wedge for squeezing. Drizzle lightly with olive oil or a simple lemon vinaigrette if desired.",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919153/foods/00dda1e9-bb86-42d3-98f5-8336c6a3dcc1.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919153/foods/00dda1e9-bb86-42d3-98f5-8336c6a3dcc1.png",
     },
     {
-        "id": "food_003",
-        "dish_name": "Mozzarella-Stuffed Meatballs in Tomato Sauce",
-        "alternative_names": [
+        id: "food_003",
+        dish_name: "Mozzarella-Stuffed Meatballs in Tomato Sauce",
+        alternative_names: [
             "Cheese-Stuffed Meatballs with Marinara",
             "Italian Stuffed Meatballs in Rich Red Sauce",
-            "Parmesan-Topped Meatballs with Lemon Herb Garnish"
+            "Parmesan-Topped Meatballs with Lemon Herb Garnish",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Ground meat (beef mix for meatballs)",
             "Mozzarella cheese (or bocconcini, stuffed inside meatballs)",
             "Tomato sauce (crushed tomatoes, garlic, onion, herbs)",
@@ -107,41 +111,43 @@ exports.topFoods = [
             "Garlic and onion",
             "Olive oil",
             "Lemon wedge (for brightness)",
-            "Seasonings: salt, pepper, possibly Italian herbs"
+            "Seasonings: salt, pepper, possibly Italian herbs",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "600-850 kcal (depending on portion size and cheese amount)",
-            "protein": "35-50 g",
-            "carbohydrates": "15-30 g (mostly from breadcrumbs and sauce)",
-            "fat": "40-55 g (from meat, cheese, oil)",
-            "fiber": "3-6 g"
+        approximate_nutrition_per_serving: {
+            calories: "600-850 kcal (depending on portion size and cheese amount)",
+            protein: "35-50 g",
+            carbohydrates: "15-30 g (mostly from breadcrumbs and sauce)",
+            fat: "40-55 g (from meat, cheese, oil)",
+            fiber: "3-6 g",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 250-450 (beef/mutton mince + cheese + tomatoes affordable locally)",
-            "street_food_or_small_restaurant": "BDT 350-600",
-            "cafe_or_Italian-inspired_eatery": "BDT 500-900 (premium versions with imported cheese)"
+        rating: 5.0,
+        price: 450,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 250-450 (beef/mutton mince + cheese + tomatoes affordable locally)",
+            street_food_or_small_restaurant: "BDT 350-600",
+            "cafe_or_Italian-inspired_eatery": "BDT 500-900 (premium versions with imported cheese)",
         },
-        "cuisine": "Italian-American / Italian-inspired (classic comfort with marinara sauce and cheese stuffing)",
-        "origin_and_popularity": "Rooted in Southern Italian traditions (like polpette al sugo), popularized in the US as hearty spaghetti & meatballs variation; common in global fusion spots, Italian restaurants, and urban delivery menus in Bangladesh (e.g., Gulshan/Banani cafes or apps like Foodpanda)",
-        "cooking_steps": [
+        cuisine: "Italian-American / Italian-inspired (classic comfort with marinara sauce and cheese stuffing)",
+        origin_and_popularity: "Rooted in Southern Italian traditions (like polpette al sugo), popularized in the US as hearty spaghetti & meatballs variation; common in global fusion spots, Italian restaurants, and urban delivery menus in Bangladesh (e.g., Gulshan/Banani cafes or apps like Foodpanda)",
+        cooking_steps: [
             "Prepare meatballs: In a large bowl, mix ground meat, breadcrumbs, grated Parmesan, minced garlic, chopped parsley, egg, salt, pepper, and optional herbs/milk for moisture. Form into large balls, then poke a hole and stuff each with a piece of mozzarella cheese. Seal well to prevent leakage.",
             "Brown the meatballs: Heat olive oil in a large skillet or Dutch oven over medium-high. Brown the stuffed meatballs on all sides (5-8 minutes), then remove and set aside (they don't need to cook through yet).",
             "Make the sauce: In the same pan, sauté chopped onion and garlic until soft. Add crushed tomatoes, tomato paste (optional), dried oregano/basil, salt, pepper, and a splash of water/wine. Simmer 10-15 minutes to develop flavor.",
             "Simmer together: Return browned meatballs to the sauce. Cover and simmer gently 20-40 minutes until meatballs are cooked through (internal temp 71°C/160°F) and sauce thickens. Stir occasionally; add water if too thick.",
             "Finish and garnish: Taste sauce and adjust seasoning. Plate meatballs in sauce, sprinkle generously with grated Parmesan, chopped fresh herbs (parsley/basil), and place a lemon wedge on the side for squeezing over top to brighten the richness.",
-            "Serve: Great over spaghetti, with crusty bread, or as is. Optional: drizzle extra olive oil or add red pepper flakes for heat."
+            "Serve: Great over spaghetti, with crusty bread, or as is. Optional: drizzle extra olive oil or add red pepper flakes for heat.",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919208/foods/ba5fe863-4ff4-4140-b332-972572f98c60.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919208/foods/ba5fe863-4ff4-4140-b332-972572f98c60.png",
     },
     {
-        "id": "food_004",
-        "dish_name": "Crispy Breaded Chicken in Bell Pepper Boat with Vegetable Salad",
-        "alternative_names": [
+        id: "food_004",
+        dish_name: "Crispy Breaded Chicken in Bell Pepper Boat with Vegetable Salad",
+        alternative_names: [
             "Fun Shaped Chicken Nugget Bell Pepper Plate",
             "Animal-Shaped Breaded Chicken Veggie Bowl",
-            "Kids' Crispy Chicken Stuffed Pepper Salad"
+            "Kids' Crispy Chicken Stuffed Pepper Salad",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Breaded chicken cutlet or nugget (shaped fun/animal-like, likely panko or breadcrumb-coated, fried or baked)",
             "Green bell pepper (halved, used as boat/base)",
             "Broccoli florets (steamed or raw)",
@@ -151,41 +157,43 @@ exports.topFoods = [
             "Bell pepper cubes (yellow/orange for color)",
             "Lettuce or mixed greens",
             "Possibly light dressing or olive oil drizzle",
-            "Seasonings for chicken: salt, pepper, herbs, garlic powder"
+            "Seasonings for chicken: salt, pepper, herbs, garlic powder",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "400-600 kcal (depending on chicken size and frying method)",
-            "protein": "25-35 g (from chicken)",
-            "carbohydrates": "30-45 g (from breadcrumbs + veggies)",
-            "fat": "15-30 g (from breading and any oil)",
-            "fiber": "8-12 g (high thanks to abundant veggies)"
+        approximate_nutrition_per_serving: {
+            calories: "400-600 kcal (depending on chicken size and frying method)",
+            protein: "25-35 g (from chicken)",
+            carbohydrates: "30-45 g (from breadcrumbs + veggies)",
+            fat: "15-30 g (from breading and any oil)",
+            fiber: "8-12 g (high thanks to abundant veggies)",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 150-300 (chicken breast + veggies very affordable locally)",
-            "street_food_or_small_restaurant": "BDT 250-450 (if available as kids' special)",
-            "cafe_or_healthy_eatery": "BDT 400-700 (premium fun/kid-focused versions in places like Gulshan cafes or meal prep services)"
+        rating: 5.0,
+        price: 250,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 150-300 (chicken breast + veggies very affordable locally)",
+            street_food_or_small_restaurant: "BDT 250-450 (if available as kids' special)",
+            cafe_or_healthy_eatery: "BDT 400-700 (premium fun/kid-focused versions in places like Gulshan cafes or meal prep services)",
         },
-        "cuisine": "Modern Healthy / Kids' Fusion (Western-inspired fun food art with emphasis on colorful veggies and breaded protein)",
-        "origin_and_popularity": "Popular in US, Europe, Australia as creative kids' meals or bento-style lunches; trending on social media (Instagram/TikTok) for picky eaters; adapted in urban Bangladesh via healthy cafes, kids' menus, or home cooking influenced by global trends",
-        "cooking_steps": [
+        cuisine: "Modern Healthy / Kids' Fusion (Western-inspired fun food art with emphasis on colorful veggies and breaded protein)",
+        origin_and_popularity: "Popular in US, Europe, Australia as creative kids' meals or bento-style lunches; trending on social media (Instagram/TikTok) for picky eaters; adapted in urban Bangladesh via healthy cafes, kids' menus, or home cooking influenced by global trends",
+        cooking_steps: [
             "Prepare the chicken: Pound or slice chicken breast thin if making cutlet. Season with salt, pepper, garlic powder. Dredge in flour, dip in beaten egg, coat with panko breadcrumbs (optionally mix in herbs/Parmesan). For fun shape, use cookie cutter or form manually before breading.",
             "Cook the chicken: Pan-fry in hot oil (or bake/air-fry at 200°C) 4-6 minutes per side until golden, crispy, and internal temp reaches 75°C. Drain on paper towels.",
             "Prep the bell pepper boat: Halve a green bell pepper, remove seeds/membrane. Optionally blanch lightly for softer texture or leave raw for crunch.",
             "Prepare veggies: Wash and cut broccoli into florets (steam 3-5 min if preferred softer), slice carrots and celery into sticks, halve tomatoes, cube extra bell peppers, tear lettuce.",
             "Assemble the plate: Place the crispy chicken piece inside/ on the bell pepper half. Arrange surrounding veggies attractively around the plate for color and fun (group by type or make patterns).",
-            "Finish: Optional light drizzle of olive oil, lemon juice, or yogurt dressing. Serve immediately for maximum crispiness—great with a side dip like ketchup or ranch for kids!"
+            "Finish: Optional light drizzle of olive oil, lemon juice, or yogurt dressing. Serve immediately for maximum crispiness—great with a side dip like ketchup or ranch for kids!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919258/foods/903c138d-e103-4487-8ebd-44dd91ac9338.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773986501/foods/903c138d-e103-4487-8ebd-44dd91ac9338.png",
     },
     {
-        "id": "food_005",
-        "dish_name": "Grilled Fish Salad Bowl with Chimichurri and Mustard Sauce",
-        "alternative_names": [
+        id: "food_005",
+        dish_name: "Grilled Fish Salad Bowl with Chimichurri and Mustard Sauce",
+        alternative_names: [
             "Grilled Salmon Power Salad",
             "Herb-Grilled Fish Lettuce Bowl with Dipping Sauces",
-            "Mediterranean-Style Grilled Fish Veggie Plate"
+            "Mediterranean-Style Grilled Fish Veggie Plate",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Grilled fish fillet (salmon, tuna, or firm white fish like sea bass/cod)",
             "Lettuce or mixed greens (base)",
             "Cherry tomatoes (halved)",
@@ -195,41 +203,43 @@ exports.topFoods = [
             "Chimichurri sauce (parsley, garlic, chili, vinegar, olive oil – red/green variant)",
             "Mustard-based sauce (honey mustard, Dijon, or creamy mustard aioli)",
             "Olive oil, lemon (implied for marinade/grill)",
-            "Seasonings: salt, pepper, garlic, herbs"
+            "Seasonings: salt, pepper, garlic, herbs",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "450-650 kcal (varies with fish type and portion)",
-            "protein": "35-50 g (high from fish)",
-            "carbohydrates": "15-25 g (mostly from veggies)",
-            "fat": "25-40 g (healthy fats from fish and olive oil)",
-            "fiber": "6-10 g"
+        approximate_nutrition_per_serving: {
+            calories: "450-650 kcal (varies with fish type and portion)",
+            protein: "35-50 g (high from fish)",
+            carbohydrates: "15-25 g (mostly from veggies)",
+            fat: "25-40 g (healthy fats from fish and olive oil)",
+            fiber: "6-10 g",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 300-500 (fish like salmon/rui/katla + veggies; imported salmon pricier)",
-            "street_food_or_small_restaurant": "BDT 400-700",
-            "cafe_or_healthy_eatery": "BDT 600-1000 (common in upscale spots like Gulshan/Banani cafes, health-focused restaurants, or delivery apps)"
+        rating: 4.5,
+        price: 500,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 300-500 (fish like salmon/rui/katla + veggies; imported salmon pricier)",
+            street_food_or_small_restaurant: "BDT 400-700",
+            cafe_or_healthy_eatery: "BDT 600-1000 (common in upscale spots like Gulshan/Banani cafes, health-focused restaurants, or delivery apps)",
         },
-        "cuisine": "Mediterranean-inspired / Modern Healthy Fusion (with South American chimichurri influence and Western salad bowl style)",
-        "origin_and_popularity": "Popular in US, Europe, Australia as nutritious grilled protein salads; chimichurri adds Argentine flair; trending in global healthy cafes and social media meal preps; increasingly available in urban Bangladesh via fusion eateries, salad bars, or premium food delivery",
-        "cooking_steps": [
+        cuisine: "Mediterranean-inspired / Modern Healthy Fusion (with South American chimichurri influence and Western salad bowl style)",
+        origin_and_popularity: "Popular in US, Europe, Australia as nutritious grilled protein salads; chimichurri adds Argentine flair; trending in global healthy cafes and social media meal preps; increasingly available in urban Bangladesh via fusion eateries, salad bars, or premium food delivery",
+        cooking_steps: [
             "Marinate the fish: Rub fillet with olive oil, minced garlic, chopped rosemary (or herbs), salt, pepper, and lemon juice/zest. Let rest 15-30 minutes (or longer in fridge).",
             "Prepare sauces: Make chimichurri by finely chopping parsley, garlic, red chili, mix with olive oil, red wine vinegar, salt, and optional oregano. For mustard sauce, whisk Dijon mustard, honey, mayo/yogurt, lemon juice, and seasonings until creamy.",
             "Cook mushrooms (optional): Sauté sliced mushrooms in olive oil with garlic, salt, pepper until golden and tender. Set aside.",
             "Grill the fish: Preheat grill pan, outdoor grill, or broiler to medium-high. Grill fish 4-6 minutes per side (depending on thickness) until charred grill marks form and fish flakes easily (internal temp ~63°C/145°F for medium). Rest briefly.",
             "Assemble the bowl: Layer fresh lettuce/greens as base. Arrange grilled fish in center. Scatter halved cherry tomatoes, sliced red onions, cooked mushrooms around. Garnish with fresh rosemary sprigs.",
-            "Serve: Add small bowls of chimichurri and mustard sauce on the side for drizzling/dipping. Optional: squeeze extra lemon over top for brightness. Enjoy fresh!"
+            "Serve: Add small bowls of chimichurri and mustard sauce on the side for drizzling/dipping. Optional: squeeze extra lemon over top for brightness. Enjoy fresh!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919302/foods/7b210282-1035-42da-a858-4ed58127633f.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919302/foods/7b210282-1035-42da-a858-4ed58127633f.png",
     },
     {
-        "id": "food_006",
-        "dish_name": "Glazed Meatloaf Ball Fusion Platter with Soft Eggs and Veggie Sides",
-        "alternative_names": [
+        id: "food_006",
+        dish_name: "Glazed Meatloaf Ball Fusion Platter with Soft Eggs and Veggie Sides",
+        alternative_names: [
             "Gourmet Dome Meatloaf Brunch Plate",
             "Honey-Glazed Ham Ball Mixed Bowl with Salmon Rose",
-            "Creative Chef's Brunch Platter with Runny Eggs and Corn Salsa"
+            "Creative Chef's Brunch Platter with Runny Eggs and Corn Salsa",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Glazed meat dome/ball (ground meat loaf or ham loaf, glazed with honey/BBQ/teriyaki sauce)",
             "Soft-boiled eggs (halved, jammy yolks)",
             "Broccoli florets (steamed)",
@@ -240,41 +250,43 @@ exports.topFoods = [
             "Cherry tomatoes (halved)",
             "Fresh herbs (basil, dill or similar for garnish)",
             "Sauces: tomato/BBQ drizzle, possible additional dips",
-            "Seasonings: salt, pepper, herbs, glaze ingredients (honey, soy, garlic)"
+            "Seasonings: salt, pepper, herbs, glaze ingredients (honey, soy, garlic)",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "700-950 kcal (rich and varied components)",
-            "protein": "40-55 g (from meat, eggs, salmon)",
-            "carbohydrates": "50-70 g (potatoes, corn, chips)",
-            "fat": "35-50 g (from glaze, salmon, eggs, frying)",
-            "fiber": "8-12 g (veggies help balance)"
+        approximate_nutrition_per_serving: {
+            calories: "700-950 kcal (rich and varied components)",
+            protein: "40-55 g (from meat, eggs, salmon)",
+            carbohydrates: "50-70 g (potatoes, corn, chips)",
+            fat: "35-50 g (from glaze, salmon, eggs, frying)",
+            fiber: "8-12 g (veggies help balance)",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 400-700 (meat + salmon + eggs + veggies; imported salmon raises cost)",
-            "street_food_or_small_restaurant": "BDT 500-900 (if offered as special)",
-            "cafe_or_healthy_upscale_eatery": "BDT 800-1500 (common in premium brunch spots in Gulshan, Banani, Dhanmondi cafes or high-end delivery like Pathao/Foodpanda fusion menus)"
+        rating: 4.8,
+        price: 400,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 400-700 (meat + salmon + eggs + veggies; imported salmon raises cost)",
+            street_food_or_small_restaurant: "BDT 500-900 (if offered as special)",
+            cafe_or_healthy_upscale_eatery: "BDT 800-1500 (common in premium brunch spots in Gulshan, Banani, Dhanmondi cafes or high-end delivery like Pathao/Foodpanda fusion menus)",
         },
-        "cuisine": "Modern Fusion / Brunch / Creative Plating (American comfort meets international brunch trends with artistic presentation)",
-        "origin_and_popularity": "Inspired by Western/American glazed ham or meatloaf dinners, elevated with brunch elements like smoked salmon roses and runny eggs; popular in global social media food trends, upscale cafes, and chef-driven brunch plates; seen in urban Bangladesh via international-inspired eateries, weekend brunches, or premium meal services",
-        "cooking_steps": [
+        cuisine: "Modern Fusion / Brunch / Creative Plating (American comfort meets international brunch trends with artistic presentation)",
+        origin_and_popularity: "Inspired by Western/American glazed ham or meatloaf dinners, elevated with brunch elements like smoked salmon roses and runny eggs; popular in global social media food trends, upscale cafes, and chef-driven brunch plates; seen in urban Bangladesh via international-inspired eateries, weekend brunches, or premium meal services",
+        cooking_steps: [
             "Prepare the meat ball/dome: Mix ground meat (beef/turkey mix), breadcrumbs, eggs, onions, garlic, herbs, salt/pepper. Form into a large ball or dome shape. Bake or sear until mostly cooked (internal ~70°C), then glaze with honey/BBQ/teriyaki sauce and finish baking/grilling for shiny, cross-hatched char (20-40 min total).",
             "Cook eggs: Soft-boil eggs 6-7 minutes for jammy yolks. Cool in ice water, peel, halve, and garnish with herbs.",
             "Prep sides: Steam broccoli until bright green and tender-crisp. Roast or fry small potato balls/croquettes until golden. Make corn salsa by mixing corn kernels, diced tomatoes, peppers, onions, lime juice, cilantro, salt.",
             "Prepare salmon rose: Thinly slice smoked salmon, roll tightly into rose shapes, secure if needed.",
             "Assemble the plate: Place glazed meat ball/dome in center. Arrange halved eggs, broccoli, potato balls, corn salsa, salmon roses, chips/wedges, and tomatoes around it attractively. Drizzle sauce under/over meat if desired, garnish with fresh herbs.",
-            "Serve: Best warm/fresh. Optional: add a light vinaigrette or extra glaze drizzle. Perfect for sharing or as an impressive solo brunch plate!"
+            "Serve: Best warm/fresh. Optional: add a light vinaigrette or extra glaze drizzle. Perfect for sharing or as an impressive solo brunch plate!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919355/foods/8885d5f9-26b6-4312-b326-7e06822e5744.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919355/foods/8885d5f9-26b6-4312-b326-7e06822e5744.png",
     },
     {
-        "id": "food_007",
-        "dish_name": "Vietnamese Grilled Beef and Tofu Rice Bowl with Fresh Vegetables",
-        "alternative_names": [
+        id: "food_007",
+        dish_name: "Vietnamese Grilled Beef and Tofu Rice Bowl with Fresh Vegetables",
+        alternative_names: [
             "Lemongrass Beef & Tofu Cơm Bowl",
             "Vietnamese Broken Rice Fusion Plate (Cơm Tấm Style with Tofu)",
-            "Herb-Topped Beef Tofu Rice Salad Bowl"
+            "Herb-Topped Beef Tofu Rice Salad Bowl",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Cooked jasmine or broken rice (white, lightly herbed or plain)",
             "Grilled/caramelized Beef slices (likely lemongrass, garlic, fish sauce, honey/soy marinade)",
             "Tofu (firm, sliced and grilled/fried, possibly marinated similarly)",
@@ -284,41 +296,43 @@ exports.topFoods = [
             "Green onions or chives (chopped garnish)",
             "Red chili threads or fresh chili (for heat and color)",
             "Possible light dressing: nuoc cham (fish sauce-based) or lime/soy drizzle implied",
-            "Seasonings: lemongrass, garlic, fish sauce/soy, sugar, pepper"
+            "Seasonings: lemongrass, garlic, fish sauce/soy, sugar, pepper",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "500-700 kcal (balanced portion with protein and veggies)",
-            "protein": "30-45 g (from Beef and tofu)",
-            "carbohydrates": "60-80 g (mainly rice)",
-            "fat": "15-25 g (from grilling and any oil)",
-            "fiber": "6-10 g (high from fresh veggies)"
+        approximate_nutrition_per_serving: {
+            calories: "500-700 kcal (balanced portion with protein and veggies)",
+            protein: "30-45 g (from Beef and tofu)",
+            carbohydrates: "60-80 g (mainly rice)",
+            fat: "15-25 g (from grilling and any oil)",
+            fiber: "6-10 g (high from fresh veggies)",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 200-400 (Beef/tofu + rice + local veggies affordable; tofu cheaper option)",
-            "street_food_or_small_restaurant": "BDT 300-550 (similar to Vietnamese-inspired spots or fusion rice bowls)",
-            "cafe_or_healthy_eatery": "BDT 500-900 (common in Gulshan/Banani cafes, health-focused places, or delivery apps with Asian fusion menus)"
+        rating: 5.0,
+        price: 200,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 200-400 (Beef/tofu + rice + local veggies affordable; tofu cheaper option)",
+            street_food_or_small_restaurant: "BDT 300-550 (similar to Vietnamese-inspired spots or fusion rice bowls)",
+            cafe_or_healthy_eatery: "BDT 500-900 (common in Gulshan/Banani cafes, health-focused places, or delivery apps with Asian fusion menus)",
         },
-        "cuisine": "Vietnamese (Southern style, with fusion healthy bowl adaptation)",
-        "origin_and_popularity": "Rooted in Vietnamese **Cơm Tấm** (broken rice with grilled Beef chop/slices, pickled veggies, herbs) or **Bún Thịt Nướng** (grilled Beef over noodles, adapted to rice here); tofu addition for vegetarian/flexitarian twist. Popular in Vietnam street food; global healthy adaptations in US/Europe/Australia via social media; increasingly in urban Bangladesh through Vietnamese/Asian fusion cafes or home cooking trends",
-        "cooking_steps": [
+        cuisine: "Vietnamese (Southern style, with fusion healthy bowl adaptation)",
+        origin_and_popularity: "Rooted in Vietnamese **Cơm Tấm** (broken rice with grilled Beef chop/slices, pickled veggies, herbs) or **Bún Thịt Nướng** (grilled Beef over noodles, adapted to rice here); tofu addition for vegetarian/flexitarian twist. Popular in Vietnam street food; global healthy adaptations in US/Europe/Australia via social media; increasingly in urban Bangladesh through Vietnamese/Asian fusion cafes or home cooking trends",
+        cooking_steps: [
             "Marinate proteins: For Beef slices and tofu, mix lemongrass (minced), garlic, fish sauce (or soy for tofu version), sugar/honey, pepper, oil. Marinate 30 min–overnight. Slice Beef thin; press/drain tofu and slice.",
             "Cook rice: Rinse jasmine/basmati rice, cook in water with pinch salt (optionally add pandan leaf or turmeric for subtle flavor/color). Fluff and keep warm.",
             "Grill proteins: Heat grill pan or skillet to medium-high. Grill Beef 3-5 min per side until caramelized/charred and cooked (internal ~63°C/145°F). Grill tofu similarly until golden and crisp edges. Rest and slice if needed.",
             "Prep veggies: Slice cucumber thinly. Julienne/shred carrots (quick-pickle optional: toss with rice vinegar, sugar, salt 10-15 min). Chop green onions/chives.",
             "Assemble bowl: Plate bed of rice (small central mound optional). Arrange grilled Beef and tofu around/slices on top. Add cucumber slices, carrot shreds, fresh basil/mint leaves. Garnish with chili threads, extra herbs.",
-            "Finish and serve: Drizzle with nuoc cham (fish sauce, lime, sugar, garlic, chili) or simple lime-soy if desired. Serve fresh—add extra herbs/lime wedge for brightness. Great with side of pickled daikon if available!"
+            "Finish and serve: Drizzle with nuoc cham (fish sauce, lime, sugar, garlic, chili) or simple lime-soy if desired. Serve fresh—add extra herbs/lime wedge for brightness. Great with side of pickled daikon if available!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919402/foods/b43372b1-1be5-44b7-ade5-a544b8d70539.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919402/foods/b43372b1-1be5-44b7-ade5-a544b8d70539.png",
     },
     {
-        "id": "food_008",
-        "dish_name": "Bangladeshi Fusion Thali Platter",
-        "alternative_names": [
+        id: "food_008",
+        dish_name: "Bangladeshi Fusion Thali Platter",
+        alternative_names: [
             "Bengali Mixed Thali with Rice and Assorted Curries",
             "Gourmet Bengali Vegetarian/ Mixed Platter",
-            "Colorful Thali with Pulao-Style Rice, Curries, Bhaja, and Chutney"
+            "Colorful Thali with Pulao-Style Rice, Curries, Bhaja, and Chutney",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Steamed or lightly spiced white rice (central base, possibly with ghee or herbs)",
             "Vegetable curry (yellow: potato-based like aloo dum or mixed veg)",
             "Green curry (posto poppy seed-based, spinach, or leafy greens bhaji)",
@@ -330,41 +344,43 @@ exports.topFoods = [
             "Red/purple onion slices, cherry tomatoes",
             "Fresh cilantro/coriander, lime wedges",
             "Small bowls: mustard/yogurt sauce, chili-tomato chutney",
-            "Seasonings: mustard oil, panch phoron (Bengali five-spice), turmeric, chili, garlic/ginger (onion-garlic in non-niramish versions)"
+            "Seasonings: mustard oil, panch phoron (Bengali five-spice), turmeric, chili, garlic/ginger (onion-garlic in non-niramish versions)",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "700-1000 kcal (varied portions, rich in carbs and veggies)",
-            "protein": "20-35 g (from paneer/tofu, possible additions)",
-            "carbohydrates": "100-140 g (mainly rice + veggies)",
-            "fat": "25-40 g (from frying, ghee/oil in curries)",
-            "fiber": "10-15 g (high from diverse vegetables)"
+        approximate_nutrition_per_serving: {
+            calories: "700-1000 kcal (varied portions, rich in carbs and veggies)",
+            protein: "20-35 g (from paneer/tofu, possible additions)",
+            carbohydrates: "100-140 g (mainly rice + veggies)",
+            fat: "25-40 g (from frying, ghee/oil in curries)",
+            fiber: "10-15 g (high from diverse vegetables)",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 300-600 (using local seasonal veggies, rice, paneer/tofu affordable)",
-            "street_food_or_small_restaurant": "BDT 400-800",
-            "cafe_or_upscale_eatery": "BDT 700-1500 (common in Gulshan/Banani/Dhanmondi fusion Bengali restaurants, premium thali specials, or delivery apps like Foodpanda/Pathao with gourmet plating)"
+        rating: 5.0,
+        price: 600,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 300-600 (using local seasonal veggies, rice, paneer/tofu affordable)",
+            street_food_or_small_restaurant: "BDT 400-800",
+            cafe_or_upscale_eatery: "BDT 700-1500 (common in Gulshan/Banani/Dhanmondi fusion Bengali restaurants, premium thali specials, or delivery apps like Foodpanda/Pathao with gourmet plating)",
         },
-        "cuisine": "Bengali / Bangladeshi (traditional thali with modern fusion presentation)",
-        "origin_and_popularity": "Deeply rooted in Bengali cuisine (shared by Bangladesh and West Bengal, India); thali format for everyday or festive meals (e.g., Pohela Boishakh, family gatherings). Features balance of flavors/textures per tradition (bitter start, then dal, bhaja, curry, chutney). Modern colorful platters popular in urban Dhaka cafes, social media food trends, and restaurants offering 'gourmet Bengali' or veg/non-veg thalis",
-        "cooking_steps": [
+        cuisine: "Bengali / Bangladeshi (traditional thali with modern fusion presentation)",
+        origin_and_popularity: "Deeply rooted in Bengali cuisine (shared by Bangladesh and West Bengal, India); thali format for everyday or festive meals (e.g., Pohela Boishakh, family gatherings). Features balance of flavors/textures per tradition (bitter start, then dal, bhaja, curry, chutney). Modern colorful platters popular in urban Dhaka cafes, social media food trends, and restaurants offering 'gourmet Bengali' or veg/non-veg thalis",
+        cooking_steps: [
             "Cook rice: Rinse and steam/boil basmati or local fine rice until fluffy. Optionally temper with ghee, bay leaf, or panch phoron for aroma. Keep warm.",
             "Prepare curries: For yellow curry (e.g., aloo dum): Boil potatoes, fry lightly, simmer in spiced tomato-onion gravy with turmeric, cumin, chili. For green curry (e.g., posto or shaak): Grind poppy seeds or use greens, cook with mustard oil, spices. For red chutney: Simmer tomatoes/pineapple with sugar, chili, ginger for sweet-sour tang.",
             "Fry items: Slice paneer/tofu or veggies (eggplant, potatoes), coat lightly in spiced batter or fry plain in mustard oil until golden and crisp.",
             "Prep fresh sides: Steam broccoli. Slice cucumber, julienne carrots, shred cabbage, slice onions/tomatoes. Arrange attractively for color.",
             "Make sauces: Whisk mustard/yogurt sauce with spices; blend chili-tomato chutney with garlic, lime.",
-            "Assemble platter: Place rice in center (garnish with cilantro, radish slices if available). Arrange small portions of curries, fried items, veggies, chutneys around in sections or bowls. Add lime wedges, fresh herbs. Serve family-style or individually—start with bitter/fresh elements per tradition, enjoy with rice."
+            "Assemble platter: Place rice in center (garnish with cilantro, radish slices if available). Arrange small portions of curries, fried items, veggies, chutneys around in sections or bowls. Add lime wedges, fresh herbs. Serve family-style or individually—start with bitter/fresh elements per tradition, enjoy with rice.",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919467/foods/9f660c76-6c57-42e4-a033-c98e710e4e16.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919467/foods/9f660c76-6c57-42e4-a033-c98e710e4e16.png",
     },
     {
-        "id": "food_009",
-        "dish_name": "Shrimp Salad Bowl with Fresh Vegetables",
-        "alternative_names": [
+        id: "food_009",
+        dish_name: "Shrimp Salad Bowl with Fresh Vegetables",
+        alternative_names: [
             "Grilled Shrimp Cucumber Tomato Salad",
             "Mediterranean Shrimp Veggie Bowl",
-            "Fresh Shrimp Lettuce Salad with Bell Peppers"
+            "Fresh Shrimp Lettuce Salad with Bell Peppers",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Cooked shrimp (peeled, deveined; likely grilled, sautéed, or poached)",
             "Lettuce or mixed greens (romaine, butter, or leafy base)",
             "Cucumber (sliced or cubed)",
@@ -373,40 +389,42 @@ exports.topFoods = [
             "Olive oil (for cooking shrimp or light dressing)",
             "Lemon juice (implied for brightness and marinade)",
             "Seasonings: garlic, salt, pepper, herbs (parsley, cilantro, or basil possible), optional chili flakes",
-            "Optional add-ins: red onion, avocado, or light vinaigrette (not visible but common)"
+            "Optional add-ins: red onion, avocado, or light vinaigrette (not visible but common)",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "300-500 kcal (light and low-carb; higher if more shrimp/oil)",
-            "protein": "30-45 g (high from shrimp)",
-            "carbohydrates": "10-20 g (mostly from veggies)",
-            "fat": "10-20 g (healthy fats from olive oil/shrimp)",
-            "fiber": "5-9 g (good from abundant fresh produce)"
+        approximate_nutrition_per_serving: {
+            calories: "300-500 kcal (light and low-carb; higher if more shrimp/oil)",
+            protein: "30-45 g (high from shrimp)",
+            carbohydrates: "10-20 g (mostly from veggies)",
+            fat: "10-20 g (healthy fats from olive oil/shrimp)",
+            fiber: "5-9 g (good from abundant fresh produce)",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 250-500 (shrimp/prawns ~BDT 300-600/kg locally, veggies cheap)",
-            "street_food_or_small_restaurant": "BDT 350-600",
-            "cafe_or_healthy_eatery": "BDT 500-900 (common in Gulshan/Banani/Dhanmondi spots, salad bars, or delivery apps like Foodpanda with seafood salads around 400-700 BDT)"
+        rating: 4.7,
+        price: 250,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 250-500 (shrimp/prawns ~BDT 300-600/kg locally, veggies cheap)",
+            street_food_or_small_restaurant: "BDT 350-600",
+            cafe_or_healthy_eatery: "BDT 500-900 (common in Gulshan/Banani/Dhanmondi spots, salad bars, or delivery apps like Foodpanda with seafood salads around 400-700 BDT)",
         },
-        "cuisine": "Mediterranean-inspired / Modern Healthy (with influences from American/seafood salads or coastal Asian styles)",
-        "origin_and_popularity": "Common in Mediterranean diets (fresh seafood + veggies), popularized globally as low-calorie, high-protein salads; variations like shrimp cocktail salads or grilled shrimp bowls trending on social media and healthy eateries; in Bangladesh, similar prawn/shrimp salads appear in fusion cafes, Thai-inspired spots, or premium delivery menus",
-        "cooking_steps": [
+        cuisine: "Mediterranean-inspired / Modern Healthy (with influences from American/seafood salads or coastal Asian styles)",
+        origin_and_popularity: "Common in Mediterranean diets (fresh seafood + veggies), popularized globally as low-calorie, high-protein salads; variations like shrimp cocktail salads or grilled shrimp bowls trending on social media and healthy eateries; in Bangladesh, similar prawn/shrimp salads appear in fusion cafes, Thai-inspired spots, or premium delivery menus",
+        cooking_steps: [
             "Prepare shrimp: Peel and devein fresh shrimp (or use pre-cleaned). Season with olive oil, minced garlic, salt, pepper, lemon juice, and optional herbs/paprika. Let marinate 10-20 minutes.",
             "Cook shrimp: Grill on medium-high heat (or sauté in pan/air-fry) 2-3 minutes per side until pink, opaque, and lightly charred (internal temp ~63°C/145°F). Avoid overcooking to keep juicy. Cool slightly if desired.",
             "Prep veggies: Wash and chop lettuce into bite-sized pieces. Slice cucumber thinly. Halve cherry tomatoes. Dice bell pepper into chunks for color and crunch.",
             "Assemble bowl: Layer lettuce as base. Arrange cucumber slices, tomato halves, bell pepper pieces around the edges or in sections for visual appeal. Place cooked shrimp generously on top or scattered throughout.",
-            "Dress and finish: Drizzle with a simple vinaigrette (olive oil + lemon juice + salt/pepper, whisked) or serve undressed for freshness. Optional: add fresh herbs (parsley/cilantro), a squeeze of lime, or light yogurt dressing. Serve chilled or at room temp—perfect light meal!"
+            "Dress and finish: Drizzle with a simple vinaigrette (olive oil + lemon juice + salt/pepper, whisked) or serve undressed for freshness. Optional: add fresh herbs (parsley/cilantro), a squeeze of lime, or light yogurt dressing. Serve chilled or at room temp—perfect light meal!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919513/foods/e2af330e-27a7-42ab-8cc9-07da6978601f.png"
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919513/foods/e2af330e-27a7-42ab-8cc9-07da6978601f.png",
     },
     {
-        "id": "food_010",
-        "dish_name": "Tandoori Paneer Tikka",
-        "alternative_names": [
+        id: "food_010",
+        dish_name: "Tandoori Paneer Tikka",
+        alternative_names: [
             "Grilled Paneer Tikka",
             "Spicy Red Paneer Tikka",
-            "Dry Paneer Tikka Appetizer"
+            "Dry Paneer Tikka Appetizer",
         ],
-        "main_ingredients": [
+        main_ingredients: [
             "Paneer (Indian cottage cheese, cut into large cubes/rectangles)",
             "Yogurt (thick/hung curd for marinade base)",
             "Kashmiri red chili powder (for vibrant red color and mild heat)",
@@ -418,29 +436,31 @@ exports.topFoods = [
             "Fresh cilantro (chopped for garnish)",
             "Green chilies or spring onions (chopped garnish)",
             "Onion rings, carrot sticks, bell pepper slices (fresh side garnish)",
-            "Salt"
+            "Salt",
         ],
-        "approximate_nutrition_per_serving": {
-            "calories": "400-600 kcal (for ~200-300g paneer portion; varies with oil/yogurt)",
-            "protein": "25-40 g (high from paneer)",
-            "carbohydrates": "10-20 g (low, mostly from marinade/veggies)",
-            "fat": "25-40 g (from paneer fat, oil, yogurt)",
-            "fiber": "2-5 g"
+        approximate_nutrition_per_serving: {
+            calories: "400-600 kcal (for ~200-300g paneer portion; varies with oil/yogurt)",
+            protein: "25-40 g (high from paneer)",
+            carbohydrates: "10-20 g (low, mostly from marinade/veggies)",
+            fat: "25-40 g (from paneer fat, oil, yogurt)",
+            fiber: "2-5 g",
         },
-        "possible_price_in_dhaka": {
-            "home_cooked": "BDT 200-400 (paneer ~BDT 400-600/kg locally, spices/veggies cheap)",
-            "street_food_or_small_restaurant": "BDT 300-600 (as starter/appetizer)",
-            "cafe_or_Indian_eatery": "BDT 500-1000 (common in Gulshan/Banani/Dhanmondi Indian restaurants like those on Foodpanda/Pathao; premium versions ~BDT 700-900)"
+        rating: 4.9,
+        price: 400,
+        possible_price_in_dhaka: {
+            home_cooked: "BDT 200-400 (paneer ~BDT 400-600/kg locally, spices/veggies cheap)",
+            street_food_or_small_restaurant: "BDT 300-600 (as starter/appetizer)",
+            cafe_or_Indian_eatery: "BDT 500-1000 (common in Gulshan/Banani/Dhanmondi Indian restaurants like those on Foodpanda/Pathao; premium versions ~BDT 700-900)",
         },
-        "cuisine": "North Indian / Punjabi (tandoori/grilled style)",
-        "origin_and_popularity": "Originates from Punjab/ North India as a tandoor-grilled vegetarian kebab variation (popularized in Indian restaurants worldwide); hugely popular in Bangladesh via Indian fusion cafes, street food spots, and delivery apps—often as veg alternative to chicken tikka",
-        "cooking_steps": [
+        cuisine: "North Indian / Punjabi (tandoori/grilled style)",
+        origin_and_popularity: "Originates from Punjab/ North India as a tandoor-grilled vegetarian kebab variation (popularized in Indian restaurants worldwide); hugely popular in Bangladesh via Indian fusion cafes, street food spots, and delivery apps—often as veg alternative to chicken tikka",
+        cooking_steps: [
             "Prepare marinade: In a bowl, whisk thick yogurt/hung curd with mustard oil, ginger-garlic paste, Kashmiri red chili powder, turmeric, coriander powder, cumin powder, garam masala, chaat masala, crushed kasuri methi, salt, and lemon juice. Add gram flour (besan) if needed for thicker coating. Mix to a smooth, vibrant red paste.",
             "Marinate paneer: Cut paneer into large cubes (1-1.5 inch). Gently toss paneer pieces in the marinade to coat evenly (avoid breaking). Optionally add cubed capsicum/onion/tomato for skewering (not in this presentation). Cover and refrigerate 1-4 hours (or overnight for deeper flavor).",
             "Grill the tikka: Preheat grill pan, oven (broil mode at 220-240°C), tandoor, or outdoor grill. Thread marinated paneer (and veggies if using) onto skewers. Brush lightly with oil/butter. Grill 10-15 minutes, turning occasionally for even charring and smoky edges (internal soft but golden outside). For stovetop: use tawa/pan on medium-high, cook in batches with little oil.",
             "Finish and garnish: Remove from heat, brush with melted butter for shine (optional). Sprinkle chopped fresh cilantro, green chilies/spring onions. Serve hot on a bed of onion rings, carrot sticks, and lemon wedges. Pair with mint chutney, green chutney, or yogurt dip.",
-            "Serve: Best fresh off the grill for maximum smokiness and juiciness. Squeeze lemon over top for tang!"
+            "Serve: Best fresh off the grill for maximum smokiness and juiciness. Squeeze lemon over top for tang!",
         ],
-        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919679/foods/a8811bf2-485e-4f3a-80f8-8d1122cfedd0.png"
-    }
+        image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919679/foods/a8811bf2-485e-4f3a-80f8-8d1122cfedd0.png",
+    },
 ];

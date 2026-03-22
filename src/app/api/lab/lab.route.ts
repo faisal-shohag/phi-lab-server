@@ -7,7 +7,8 @@ router.get('/issue/:id', gitIssueController.getIssueByIdController)
 router.get('/issues/search', gitIssueController.searchIssueController)
 
 //
-router.get('/foods/top-food', foodController.topFoodsController)
+router.get('/foods/top-foods', foodController.topFoodsController)
+router.get('/foods/:id', foodController.singleFoodController)
 
 
 export default router;

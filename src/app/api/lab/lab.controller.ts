@@ -54,13 +54,25 @@ export const topFoodsController = (req: Request, res: Response) => {
   });
 }
 
+export const singleFoodController = (req: Request, res: Response) =>{
+    const { id } = req.params;
+    const food = topFoods.find((food) => food.id === id)
+    return res.status(200).json({
+      status: "success",
+      message: "Food fetched successfully",
+      data: food,
+    })
+}
+
 export const gitIssueController = {
   gitAllIssueController,
   getIssueByIdController,
   searchIssueController,
+  
 
 };
 
 export const foodController = {
-  topFoodsController
+  topFoodsController,
+  singleFoodController
 }
