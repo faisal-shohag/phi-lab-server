@@ -50,7 +50,7 @@ export const topFoodsController = (req: Request, res: Response) => {
    return res.status(200).json({
     status: "success",
     message: "Issues fetched successfully",
-    data: foods.slice(1, 4),
+    data: foods.slice(0, 4),
   });
 }
 
