@@ -63,10 +63,20 @@ const singleFoodController = (req, res) => {
 exports.singleFoodController = singleFoodController;
 //all foods
 const allFoodController = (req, res) => {
+    const { search, category } = req.query;
+    let filteredFoods = food_data_1.foods;
+    if (search) {
+        const searchValue = search.toString().toLowerCase();
+        filteredFoods = filteredFoods.filter((food) => food.dish_name.toLowerCase().includes(searchValue));
+    }
+    if (category) {
+        const categoryValue = category.toString().toLowerCase();
+        filteredFoods = filteredFoods.filter((food) => { var _a; return ((_a = food === null || food === void 0 ? void 0 : food.category) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === categoryValue; });
+    }
     return res.status(200).json({
         status: "success",
         message: "Foods fetched successfully",
-        data: food_data_1.foods,
+        data: filteredFoods,
     });
 };
 exports.allFoodController = allFoodController;
@@ -78,5 +88,5 @@ exports.gitIssueController = {
 exports.foodController = {
     topFoodsController: exports.topFoodsController,
     singleFoodController: exports.singleFoodController,
-    allFoodController: exports.allFoodController
+    allFoodController: exports.allFoodController,
 };

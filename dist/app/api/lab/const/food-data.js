@@ -5,6 +5,7 @@ exports.foods = [
     {
         id: "food_001",
         dish_name: "Grilled Chicken Rice Bowl with Fresh Veggie Salad",
+        category: "dish",
         alternative_names: [
             "Mediterranean Chicken Rice Plate",
             "Chicken Rice Power Bowl",
@@ -51,6 +52,7 @@ exports.foods = [
     },
     {
         id: "food_002",
+        category: "dish",
         dish_name: "Grilled Lemon Basil Chicken with Rice and Tomato Salad",
         alternative_names: [
             "Lemon Herb Grilled Chicken Breast Plate",
@@ -94,6 +96,7 @@ exports.foods = [
     },
     {
         id: "food_003",
+        category: "dish",
         dish_name: "Mozzarella-Stuffed Meatballs in Tomato Sauce",
         alternative_names: [
             "Cheese-Stuffed Meatballs with Marinara",
@@ -141,6 +144,7 @@ exports.foods = [
     },
     {
         id: "food_004",
+        category: "dish",
         dish_name: "Crispy Breaded Chicken in Bell Pepper Boat with Vegetable Salad",
         alternative_names: [
             "Fun Shaped Chicken Nugget Bell Pepper Plate",
@@ -187,6 +191,7 @@ exports.foods = [
     },
     {
         id: "food_005",
+        category: "dish",
         dish_name: "Grilled Fish Salad Bowl with Chimichurri and Mustard Sauce",
         alternative_names: [
             "Grilled Salmon Power Salad",
@@ -233,6 +238,7 @@ exports.foods = [
     },
     {
         id: "food_006",
+        category: "dish",
         dish_name: "Glazed Meatloaf Ball Fusion Platter with Soft Eggs and Veggie Sides",
         alternative_names: [
             "Gourmet Dome Meatloaf Brunch Plate",
@@ -280,6 +286,7 @@ exports.foods = [
     },
     {
         id: "food_007",
+        category: "dish",
         dish_name: "Vietnamese Grilled Beef and Tofu Rice Bowl with Fresh Vegetables",
         alternative_names: [
             "Lemongrass Beef & Tofu Cơm Bowl",
@@ -326,6 +333,7 @@ exports.foods = [
     },
     {
         id: "food_008",
+        category: "dish",
         dish_name: "Bangladeshi Fusion Thali Platter",
         alternative_names: [
             "Bengali Mixed Thali with Rice and Assorted Curries",
@@ -418,6 +426,7 @@ exports.foods = [
     },
     {
         id: "food_010",
+        category: "dish",
         dish_name: "Tandoori Paneer Tikka",
         alternative_names: [
             "Grilled Paneer Tikka",
@@ -463,4 +472,382 @@ exports.foods = [
         ],
         image_link: "https://res.cloudinary.com/dj493l0jy/image/upload/v1773919679/foods/a8811bf2-485e-4f3a-80f8-8d1122cfedd0.png",
     },
+    {
+        "id": "food_011",
+        "dish_name": "Classic Cheeseburger",
+        "alternative_names": [
+            "Cheese Burger",
+            "Beef Cheeseburger",
+            "American Cheeseburger"
+        ],
+        "category": "burger",
+        "main_ingredients": [
+            "Beef patty (ground beef, seasoned)",
+            "Burger bun (soft sesame or plain)",
+            "Cheddar cheese (or American cheese slice)",
+            "Lettuce",
+            "Tomato slices",
+            "Onion slices (raw or caramelized)",
+            "Pickles (gherkin slices)",
+            "Special sauce or ketchup + mustard + mayonnaise",
+            "Seasonings: salt, black pepper, garlic powder"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "550-750 kcal",
+            "protein": "30-40 g",
+            "carbohydrates": "45-60 g",
+            "fat": "30-45 g",
+            "fiber": "3-5 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 180-350",
+            "street_food_or_small_restaurant": "BDT 250-450",
+            "cafe_or_fast_food_chain": "BDT 400-750"
+        },
+        "cuisine": "American",
+        "origin_and_popularity": "Classic American fast food, originated in the United States in the early 20th century. Extremely popular worldwide including Bangladesh.",
+        "cooking_steps": [
+            "Mix ground beef with salt, pepper, and garlic powder. Shape into patties (about 150-180g each).",
+            "Toast the burger buns lightly on a griddle or pan.",
+            "Cook the patty on a hot grill or skillet for 3-4 minutes per side for medium doneness.",
+            "Place cheese slice on the patty in the last 1 minute so it melts nicely.",
+            "Assemble: Spread sauce on bottom bun, add lettuce, patty with melted cheese, tomato, onion, pickles, and top bun.",
+            "Serve hot with fries and cold drink."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774363086/foods/afe49ef1-da8a-48d1-8a2c-e92803127253.png",
+        "rating": 4.7,
+        "price": 450
+    },
+    {
+        "id": "food_012",
+        "dish_name": "Classic Chicken Burger",
+        "alternative_names": [
+            "Crispy Chicken Burger",
+            "Grilled Chicken Burger",
+            "Chicken Cheese Burger"
+        ],
+        "category": "burger",
+        "main_ingredients": [
+            "Chicken patty (crispy fried or grilled chicken breast/thigh)",
+            "Burger bun (sesame or plain soft bun)",
+            "Cheddar or processed cheese slice",
+            "Lettuce leaves",
+            "Tomato slices",
+            "Onion rings (raw or caramelized)",
+            "Pickles (gherkin slices)",
+            "Special burger sauce (mayonnaise + ketchup + mustard mix)",
+            "Seasonings: salt, pepper, garlic powder, paprika (for chicken)"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "520-720 kcal",
+            "protein": "32-42 g",
+            "carbohydrates": "48-65 g",
+            "fat": "22-38 g",
+            "fiber": "3-6 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 200-380",
+            "street_food_or_small_restaurant": "BDT 280-480",
+            "cafe_or_fast_food_chain": "BDT 420-780"
+        },
+        "cuisine": "American / Fast Food",
+        "origin_and_popularity": "Popular American-style fast food item, widely loved in Bangladesh through local cafes, burger chains, and delivery apps.",
+        "cooking_steps": [
+            "Season chicken breast or thigh with salt, pepper, garlic powder, and paprika.",
+            "For crispy version: Coat in flour, dip in egg, then breadcrumbs and deep fry until golden and crispy.",
+            "For grilled version: Cook on hot grill or pan with little oil for 5-6 minutes per side.",
+            "Melt cheese slice on the chicken patty in the last minute of cooking.",
+            "Toast the burger buns lightly.",
+            "Assemble: Spread special sauce on bottom bun, layer lettuce, chicken patty with melted cheese, tomato, onion, pickles, and close with top bun.",
+            "Serve hot with french fries and cold drink."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774363416/foods/adfc835d-b05f-46c7-a095-5f3c4d54769b.png",
+        "rating": 4.6,
+        "price": 480
+    },
+    {
+        "id": "food_013",
+        "dish_name": "Smashed Burger",
+        "alternative_names": [
+            "Classic Smashed Cheeseburger",
+            "Thin & Crispy Smashed Burger",
+            "Oklahoma-Style Smashed Burger"
+        ],
+        "category": "burger",
+        "main_ingredients": [
+            "Thin beef patty (80/20 ground beef, smashed thin on griddle)",
+            "Soft burger bun (potato or brioche style)",
+            "American or cheddar cheese slice",
+            "Caramelized onions (or raw thinly sliced)",
+            "Pickles (dill slices)",
+            "Lettuce (shredded or leaf)",
+            "Special smashed burger sauce (mayo + ketchup + mustard + relish + spices)",
+            "Seasonings: salt, black pepper, garlic powder"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "580-780 kcal",
+            "protein": "28-38 g",
+            "carbohydrates": "42-55 g",
+            "fat": "35-48 g",
+            "fiber": "3-5 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 220-400",
+            "street_food_or_small_restaurant": "BDT 320-520",
+            "cafe_or_fast_food_chain": "BDT 450-850"
+        },
+        "cuisine": "American (Modern Diner / Smash Burger Style)",
+        "origin_and_popularity": "Originated from American diner culture (popularized by Oklahoma-style smash burgers). Currently one of the most trending burger styles worldwide, including in Dhaka's gourmet burger cafes.",
+        "cooking_steps": [
+            "Heat a heavy cast-iron griddle or skillet until very hot.",
+            "Take a loose ball of ground beef (about 120-150g), place on griddle and immediately smash it very thin with a burger press or heavy spatula.",
+            "Season the top generously with salt and pepper while cooking.",
+            "After 1-2 minutes when edges are crispy and brown, flip the patty.",
+            "Place cheese slice on top and let it melt while the other side cooks (another 1 minute).",
+            "Toast the buns on the griddle with a little butter.",
+            "Assemble: Spread special sauce on bottom bun, add shredded lettuce, smashed cheesy patty, caramelized onions, pickles, and top bun.",
+            "Serve immediately while the edges are still crispy."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774363673/foods/9b817a26-f391-46f3-bf3f-b907df8032b2.png",
+        "rating": 4.8,
+        "price": 520
+    },
+    {
+        "id": "food_014",
+        "dish_name": "Kacchi Biriyani",
+        "alternative_names": [
+            "Kacchi Dum Biriyani",
+            "Mutton Kacchi Biriyani",
+            "Traditional Hyderabadi Kacchi Biriyani"
+        ],
+        "category": "biriyani",
+        "main_ingredients": [
+            "Mutton (bone-in, preferably goat meat or lamb)",
+            "Basmati rice (aged, long-grain)",
+            "Yogurt (thick curd for marinade)",
+            "Onions (fried golden brown)",
+            "Ginger-garlic paste",
+            "Whole spices (cardamom, cinnamon, cloves, bay leaf, star anise, mace)",
+            "Biriyani masala (red chili, coriander, cumin, turmeric, garam masala)",
+            "Saffron milk (saffron soaked in warm milk)",
+            "Ghee and vegetable oil",
+            "Fresh coriander and mint leaves",
+            "Lemon juice",
+            "Salt"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "850-1100 kcal",
+            "protein": "35-45 g",
+            "carbohydrates": "90-120 g",
+            "fat": "35-50 g",
+            "fiber": "4-7 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 350-650",
+            "street_food_or_small_restaurant": "BDT 450-750",
+            "cafe_or_specialty_restaurant": "BDT 650-1200"
+        },
+        "cuisine": "Bangladeshi / Hyderabadi Indian",
+        "origin_and_popularity": "Traditional Hyderabadi Kacchi Biriyani adapted in Bangladesh. Famous for its 'dum' cooking method where raw marinated meat and partially cooked rice are layered and slow-cooked together. One of the most loved festive and special occasion dishes in Bangladesh.",
+        "cooking_steps": [
+            "Marinate mutton with yogurt, ginger-garlic paste, biriyani masala, fried onions, fresh coriander-mint, lemon juice, and salt. Refrigerate for at least 4-6 hours (overnight is best).",
+            "Parboil basmati rice with whole spices and salt until 70% cooked. Drain and keep aside.",
+            "In a heavy-bottomed handi or pot, spread the marinated mutton as the bottom layer.",
+            "Layer the partially cooked rice over the meat. Sprinkle saffron milk, ghee, fried onions, and more mint-coriander.",
+            "Seal the pot with dough (or aluminum foil + tight lid) for dum cooking.",
+            "Cook on high heat for 10 minutes, then on very low heat (dum) for 35-45 minutes until meat is tender and rice is fully cooked.",
+            "Gently mix before serving. Serve hot with raita, salad, and lemon wedges."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774364206/foods/abdb7caa-c84b-4a9e-9d1d-5805b9e155c7.png",
+        "rating": 4.9,
+        "price": 750
+    },
+    {
+        "id": "food_015",
+        "dish_name": "Chicken Biriyani",
+        "alternative_names": [
+            "Chicken Dum Biriyani",
+            "Dhaka-style Chicken Biriyani",
+            "Special Chicken Biriyani"
+        ],
+        "category": "biriyani",
+        "main_ingredients": [
+            "Chicken (bone-in pieces, preferably thigh and leg)",
+            "Aged basmati rice",
+            "Yogurt (thick curd)",
+            "Fried onions (beresta)",
+            "Ginger-garlic paste",
+            "Whole spices (cardamom, cinnamon, cloves, bay leaves, star anise, mace)",
+            "Biriyani masala powder",
+            "Saffron or yellow food color mixed in milk",
+            "Ghee and cooking oil",
+            "Fresh mint leaves and coriander leaves",
+            "Green chilies",
+            "Lemon juice",
+            "Salt"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "780-1050 kcal",
+            "protein": "38-48 g",
+            "carbohydrates": "85-115 g",
+            "fat": "30-45 g",
+            "fiber": "4-6 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 280-550",
+            "street_food_or_small_restaurant": "BDT 380-650",
+            "cafe_or_specialty_restaurant": "BDT 550-950"
+        },
+        "cuisine": "Bangladeshi / Indian",
+        "origin_and_popularity": "One of the most popular and widely consumed biriyani varieties in Bangladesh. Easier and quicker to prepare than Kacchi Biriyani since chicken is pre-cooked before layering.",
+        "cooking_steps": [
+            "Marinate chicken pieces with yogurt, ginger-garlic paste, biriyani masala, fried onions, mint, coriander, green chilies, lemon juice, and salt for 2-4 hours.",
+            "Parboil basmati rice with whole spices and salt until 70-80% cooked. Drain and set aside.",
+            "In a heavy pot, heat oil/ghee and lightly fry the marinated chicken until it changes color.",
+            "Layer the partially cooked rice over the chicken. Drizzle saffron milk or colored milk, ghee, more fried onions, mint, and coriander.",
+            "Seal the pot tightly with dough or foil and lid.",
+            "Cook on high heat for 5-7 minutes, then on very low flame (dum) for 20-25 minutes.",
+            "Rest for 10 minutes, then gently fluff and mix before serving.",
+            "Serve hot with raita, salad, and lemon wedges."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774364339/foods/c6a7a9c8-a223-4180-ad7d-3d86b3396b6c.png",
+        "rating": 4.8,
+        "price": 620
+    },
+    {
+        "id": "food_016",
+        "dish_name": "Milkshake",
+        "alternative_names": [
+            "Classic Vanilla Milkshake",
+            "Thick Creamy Milkshake",
+            "Chocolate Milkshake"
+        ],
+        "category": "beverage",
+        "main_ingredients": [
+            "Milk (full cream or chilled)",
+            "Vanilla ice cream (or chocolate ice cream)",
+            "Sugar or sweetened condensed milk",
+            "Vanilla extract",
+            "Whipped cream (for topping)",
+            "Chocolate syrup or sauce (optional for chocolate version)",
+            "Ice cubes (optional for extra thickness)",
+            "Cherry or chocolate shavings for garnish"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "420-620 kcal",
+            "protein": "10-15 g",
+            "carbohydrates": "55-75 g",
+            "fat": "18-28 g",
+            "fiber": "1-3 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 120-250",
+            "street_food_or_small_cafe": "BDT 180-350",
+            "cafe_or_fast_food_chain": "BDT 280-450"
+        },
+        "cuisine": "American / International",
+        "origin_and_popularity": "Classic American beverage, extremely popular worldwide as a refreshing and indulgent drink. Very common in Dhaka cafes, burger joints, and dessert shops.",
+        "cooking_steps": [
+            "Chill the milk and glass in the refrigerator for 30 minutes.",
+            "Add 1.5 cups cold milk, 2-3 large scoops of vanilla ice cream, 2 tbsp sugar, and ½ tsp vanilla extract into a blender.",
+            "Blend on high speed for 30-60 seconds until smooth and thick.",
+            "Pour into a tall serving glass.",
+            "Top with whipped cream, a drizzle of chocolate syrup, and a cherry or chocolate shavings.",
+            "Serve immediately with a thick straw."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774364613/foods/3cb36000-0df8-4661-ac50-39ff4566bbf9.png",
+        "rating": 4.7,
+        "price": 320
+    },
+    {
+        "id": "food_017",
+        "dish_name": "Fruit Shake",
+        "alternative_names": [
+            "Mixed Fruit Shake",
+            "Fresh Fruit Milkshake",
+            "Tropical Fruit Shake"
+        ],
+        "category": "beverage",
+        "main_ingredients": [
+            "Milk (chilled full cream or low-fat)",
+            "Banana (ripe)",
+            "Mango (or seasonal fruits like strawberry, papaya, pineapple)",
+            "Apple or orange (optional for extra freshness)",
+            "Sugar or honey",
+            "Vanilla ice cream or yogurt (for creaminess)",
+            "Ice cubes",
+            "Fresh fruits slices for garnish (banana, mango, cherry)"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "380-550 kcal",
+            "protein": "8-14 g",
+            "carbohydrates": "65-85 g",
+            "fat": "8-15 g",
+            "fiber": "5-8 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 130-280",
+            "street_food_or_small_cafe": "BDT 190-360",
+            "cafe_or_fast_food_chain": "BDT 290-480"
+        },
+        "cuisine": "International / Bangladeshi Cafe Style",
+        "origin_and_popularity": "Popular refreshing beverage in Bangladesh cafes, juice bars, and fast food outlets. Loved for its natural sweetness and fruity flavor, especially during summer.",
+        "cooking_steps": [
+            "Wash and chop fresh fruits (banana, mango, etc.) into small pieces.",
+            "Add chopped fruits, 1.5 cups chilled milk, 1-2 scoops vanilla ice cream or yogurt, 1-2 tbsp sugar/honey, and a handful of ice cubes into a blender.",
+            "Blend on high speed for 45-90 seconds until smooth and frothy.",
+            "Taste and adjust sweetness if needed.",
+            "Pour into a tall serving glass.",
+            "Garnish with fresh fruit slices, a scoop of ice cream on top, or a drizzle of honey.",
+            "Serve immediately with a straw."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774364825/foods/0efa01ea-3ba4-4291-b5c3-1ca069e3e4af.png",
+        "rating": 4.6,
+        "price": 290
+    },
+    {
+        "id": "food_018",
+        "dish_name": "Chocolate Shake",
+        "alternative_names": [
+            "Classic Chocolate Milkshake",
+            "Thick Chocolate Shake",
+            "Chocolate Ice Cream Shake"
+        ],
+        "category": "beverage",
+        "main_ingredients": [
+            "Milk (chilled full cream)",
+            "Chocolate ice cream (2-3 scoops)",
+            "Chocolate syrup or cocoa powder",
+            "Sugar (optional, if needed)",
+            "Vanilla extract (a dash)",
+            "Whipped cream (for topping)",
+            "Chocolate shavings or sauce (for garnish)",
+            "Ice cubes (for extra thickness)"
+        ],
+        "approximate_nutrition_per_serving": {
+            "calories": "480-680 kcal",
+            "protein": "10-16 g",
+            "carbohydrates": "60-80 g",
+            "fat": "20-32 g",
+            "fiber": "2-4 g"
+        },
+        "possible_price_in_dhaka": {
+            "home_cooked": "BDT 150-280",
+            "street_food_or_small_cafe": "BDT 220-380",
+            "cafe_or_fast_food_chain": "BDT 320-520"
+        },
+        "cuisine": "American / International",
+        "origin_and_popularity": "Beloved classic chocolate beverage, extremely popular in Dhaka cafes, burger joints, and dessert shops. A go-to indulgent drink for chocolate lovers.",
+        "cooking_steps": [
+            "Chill the milk and serving glass beforehand.",
+            "In a blender, add 1.5 cups cold milk, 2-3 large scoops of chocolate ice cream, 2-3 tbsp chocolate syrup (or 2 tbsp cocoa powder), and a dash of vanilla extract.",
+            "Blend on high speed for 45-75 seconds until smooth, thick, and creamy.",
+            "Pour into a tall glass.",
+            "Top generously with whipped cream, drizzle more chocolate syrup, and sprinkle chocolate shavings.",
+            "Serve immediately with a thick straw."
+        ],
+        "image_link": "https://res.cloudinary.com/dj493l0jy/image/upload/v1774364933/foods/46e6bcf8-3dc8-4d21-9dbc-95ea95f371d9.png",
+        "rating": 4.8,
+        "price": 340
+    }
 ];

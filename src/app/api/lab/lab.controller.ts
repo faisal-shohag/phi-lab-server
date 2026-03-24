@@ -45,44 +45,61 @@ export const searchIssueController = (req: Request, res: Response) => {
   });
 };
 
-
 export const topFoodsController = (req: Request, res: Response) => {
-   return res.status(200).json({
+  return res.status(200).json({
     status: "success",
     message: "Issues fetched successfully",
     data: foods.slice(0, 4),
   });
-}
+};
 
-export const singleFoodController = (req: Request, res: Response) =>{
-    const { id } = req.params;
-    const food = foods.find((food) => food.id === id)
-    return res.status(200).json({
-      status: "success",
-      message: "Food fetched successfully",
-      data: food,
-    })
-}
+export const singleFoodController = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const food = foods.find((food) => food.id === id);
+  return res.status(200).json({
+    status: "success",
+    message: "Food fetched successfully",
+    data: food,
+  });
+};
 
 //all foods
-export const allFoodController = (req: Request, res: Response) =>{
-    return res.status(200).json({
-      status: "success",
-      message: "Foods fetched successfully",
-      data: foods,
-    })
-}
+export const allFoodController = (req: Request, res: Response) => {
+  const { search, category } = req.query;
+
+  let filteredFoods = foods;
+
+  if (search) {
+    const searchValue = search.toString().toLowerCase();
+
+    filteredFoods = filteredFoods.filter((food) =>
+      food.dish_name.toLowerCase().includes(searchValue),
+    );
+  }
+
+  if (category) {
+    const categoryValue = category.toString().toLowerCase();
+
+    filteredFoods = filteredFoods.filter(
+      (food) => food?.category?.toLowerCase() === categoryValue,
+    );
+  }
+
+  return res.status(200).json({
+    status: "success",
+    message: "Foods fetched successfully",
+    data: filteredFoods,
+  });
+};
 
 export const gitIssueController = {
   gitAllIssueController,
   getIssueByIdController,
   searchIssueController,
-  
-
 };
 
 export const foodController = {
   topFoodsController,
   singleFoodController,
-  allFoodController
-}
+  allFoodController,
+};
