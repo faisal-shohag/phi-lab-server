@@ -83,5 +83,6 @@ export const gitIssueController = {
 
 export const foodController = {
   topFoodsController,
-  singleFoodController
+  singleFoodController,
+  allFoodController
 }

@@ -77,5 +77,6 @@ exports.gitIssueController = {
 };
 exports.foodController = {
     topFoodsController: exports.topFoodsController,
-    singleFoodController: exports.singleFoodController
+    singleFoodController: exports.singleFoodController,
+    allFoodController: exports.allFoodController
 };

@@ -9,6 +9,7 @@ router.get('/issues/search', gitIssueController.searchIssueController)
 //
 router.get('/foods/top-foods', foodController.topFoodsController)
 router.get('/foods/:id', foodController.singleFoodController)
+router.get('/foods', foodController.allFoodController)
 
 
 export default router;

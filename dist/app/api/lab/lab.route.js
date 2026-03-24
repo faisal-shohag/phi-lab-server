@@ -13,5 +13,6 @@ router.get('/issues/search', lab_controller_1.gitIssueController.searchIssueCont
 //
 router.get('/foods/top-foods', lab_controller_1.foodController.topFoodsController);
 router.get('/foods/:id', lab_controller_1.foodController.singleFoodController);
+router.get('/foods', lab_controller_1.foodController.allFoodController);
 exports.default = router;
 exports.labRoute = router;
