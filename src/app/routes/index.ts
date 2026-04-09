@@ -10,6 +10,7 @@ import { jsSeriesRoutes } from "../api/js-series/js-series.route"
 import { uploadRoutes } from "../api/upload/upload.route"
 import { aiRoutes } from "../api/gen-ai/ai.route"
 import { labRoute } from "../api/lab/lab.route"
+import { checkerRoute } from "../api/checker/checker.route"
 
 export const router = Router()
 
@@ -57,7 +58,12 @@ const moduleRoutes = [
     {
         path: '/lab',
         route: labRoute
+    },
+    {
+        path: '/checker',
+        route: checkerRoute
     }
+    
 ]
 
 moduleRoutes.forEach((route) => {

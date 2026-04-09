@@ -13,6 +13,7 @@ const js_series_route_1 = require("../api/js-series/js-series.route");
 const upload_route_1 = require("../api/upload/upload.route");
 const ai_route_1 = require("../api/gen-ai/ai.route");
 const lab_route_1 = require("../api/lab/lab.route");
+const checker_route_1 = require("../api/checker/checker.route");
 exports.router = (0, express_1.Router)();
 const moduleRoutes = [
     {
@@ -58,6 +59,10 @@ const moduleRoutes = [
     {
         path: '/lab',
         route: lab_route_1.labRoute
+    },
+    {
+        path: '/checker',
+        route: checker_route_1.checkerRoute
     }
 ];
 moduleRoutes.forEach((route) => {
