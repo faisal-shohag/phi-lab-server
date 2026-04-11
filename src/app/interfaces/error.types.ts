@@ -9,3 +9,5 @@ export interface TGenericErrorResponse {
     errorSources?: TErrorSources[]
 
 }
+
+export type SheetValues = (string | number)[];
