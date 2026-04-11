@@ -22,6 +22,7 @@ router.get('/news/category/:id', DragonNewsController.getNewsByCategoryId)
 
 
 // sheet-router
+router.post('/extract-job', sheetsController.extractJobStructuredData)
 router.post("/sheets", sheetsController.addData);
 router.get("/sheets", sheetsController.getData);
 router.put("/sheets", sheetsController.updateData);

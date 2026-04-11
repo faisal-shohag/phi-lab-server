@@ -22,6 +22,7 @@ router.get('/news', dragon_news_controller_1.DragonNewsController.getNews);
 router.get('/news/:id', dragon_news_controller_1.DragonNewsController.getSingleNews);
 router.get('/news/category/:id', dragon_news_controller_1.DragonNewsController.getNewsByCategoryId);
 // sheet-router
+router.post('/extract-job', sheet_controller_1.sheetsController.extractJobStructuredData);
 router.post("/sheets", sheet_controller_1.sheetsController.addData);
 router.get("/sheets", sheet_controller_1.sheetsController.getData);
 router.put("/sheets", sheet_controller_1.sheetsController.updateData);

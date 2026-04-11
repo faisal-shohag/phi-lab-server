@@ -4,6 +4,7 @@ exports.sheetsRoute = void 0;
 const express_1 = require("express");
 const sheet_controller_1 = require("./sheet.controller");
 const router = (0, express_1.Router)();
+router.post('/job', sheet_controller_1.sheetsController.extractJobStructuredData);
 router.post("/", sheet_controller_1.sheetsController.addData);
 router.get("/", sheet_controller_1.sheetsController.getData);
 router.put("/", sheet_controller_1.sheetsController.updateData);
