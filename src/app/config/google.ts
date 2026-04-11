@@ -1,8 +1,9 @@
-import {google} from 'googleapis'
-import { envVars } from './env';
+import { google } from "googleapis";
 
+const decoded = Buffer.from(process.env.sheet_service_key as string, "base64").toString("utf8")
+const key = JSON.parse(decoded)
 const auth = new google.auth.GoogleAuth({
-  keyFile: envVars.NODE_ENV === "development" ? "src\\app\\config\\spreadsheet.json" : "spreadsheet.json",
+  credentials: key,
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
