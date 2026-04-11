@@ -1,7 +1,8 @@
 import {google} from 'googleapis'
+import { envVars } from './env';
 
 const auth = new google.auth.GoogleAuth({
-  keyFile: "src\\app\\config\\spreadsheet.json",
+  keyFile: envVars.NODE_ENV === "development" ? "src\\app\\config\\spreadsheet.json" : "spreadsheet.json",
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
