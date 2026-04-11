@@ -11,9 +11,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getSheetsClient = void 0;
 const googleapis_1 = require("googleapis");
-const env_1 = require("./env");
+const decoded = Buffer.from(process.env.sheet_service_key, "base64").toString("utf8");
+const key = JSON.parse(decoded);
 const auth = new googleapis_1.google.auth.GoogleAuth({
-    keyFile: env_1.envVars.NODE_ENV === "development" ? "src\\app\\config\\spreadsheet.json" : "spreadsheet.json",
+    credentials: key,
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 const getSheetsClient = () => __awaiter(void 0, void 0, void 0, function* () {
