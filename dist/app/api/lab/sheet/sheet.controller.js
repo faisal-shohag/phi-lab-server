@@ -95,7 +95,7 @@ Return **ONLY** a valid JSON array with exactly these 9 fields in this exact ord
   "Category",
   "Category_1",
   "Location": onsite|remote|hybrid,
-  "Work Type": fulltime|contractual|intership,
+  "Work Type": fulltime|contractual|internship,
   "Experience",
   "Salary (BDT/mo)",
   "Skills Required"
