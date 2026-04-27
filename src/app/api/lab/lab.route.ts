@@ -2,6 +2,7 @@ import express from "express";
 import { foodController, gitIssueController } from "./lab.controller";
 import { DragonNewsController } from "./apis/dragon-news/dragon-news.controller";
 import { sheetsController } from "./sheet/sheet.controller";
+import { IllustraController } from "./apis/illustra/illustra.controller";
 const router = express.Router();
 
 router.get('/issues', gitIssueController.gitAllIssueController)
@@ -19,6 +20,12 @@ router.get('/news/categories', DragonNewsController.getCategories)
 router.get('/news', DragonNewsController.getNews)
 router.get('/news/:id', DragonNewsController.getSingleNews)
 router.get('/news/category/:id', DragonNewsController.getNewsByCategoryId)
+
+//illustra
+router.get('/photos/categories', IllustraController.getCategories)
+router.get('/photos', IllustraController.getPhotos)
+router.get('/photos/:id', IllustraController.getSinglePhoto)
+router.get('/photos/category/:id', IllustraController.getPhotosByCategoryName)
 
 
 // sheet-router
