@@ -43,8 +43,14 @@ const getSinglePhoto = (req, res) => {
 exports.getSinglePhoto = getSinglePhoto;
 //get news by category id
 const getPhotosByCategoryName = (req, res) => {
-    const { category } = req.query;
-    const photosByCategory = photos_json_1.default.filter((n) => n.name == category);
+    const category = req.query.category;
+    if (!category) {
+        return res.status(404).json({
+            status: "error",
+            message: `Please provide a category name`,
+        });
+    }
+    const photosByCategory = photos_json_1.default.filter((n) => n.category.toLowerCase() == category.toLowerCase());
     // console.log(newsByCategory)
     if (photosByCategory.length === 0) {
         return res.status(404).json({
