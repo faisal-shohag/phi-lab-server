@@ -62,33 +62,30 @@ Single photo by numeric `id`.
 ---
 
 ### GET `/photos/category/:id`
-Filter photos by category name. **Note:** despite the `:id` path param, the actual filter reads `req.query.category` (query string), not the path param — the route param is unused.
-
-Query params:
-- `category` (string, required) — matched case-insensitively against `Photo.category`.
+Filter photos by category `id`. Looks up the category by `id`, then matches photos case-insensitively against that category's `name`.
 
 **Response 200**
 ```json
 {
   "status": "success",
-  "message": "Photos with categoryName {category} fetched successfully",
+  "message": "Photos with categoryId {id} fetched successfully",
   "data": [ /* Photo[] */ ]
 }
 ```
 
-**Response 404** — missing `category` query param
+**Response 404** — no category matches `id`
 ```json
-{ "status": "error", "message": "Please provide a category name" }
+{ "status": "error", "message": "No category found with id {id}" }
 ```
 
-**Response 404** — no photos match
+**Response 404** — category exists but has no photos
 ```json
-{ "status": "error", "message": "No photo found with categoryName {category}" }
+{ "status": "error", "message": "No photo found with categoryId {id}" }
 ```
 
 **Example**
 ```
-GET /api/v1/lab/photos/category/1?category=Realistic
+GET /api/v1/lab/photos/category/7
 ```
 
 ## Data Shapes
@@ -116,5 +113,4 @@ GET /api/v1/lab/photos/category/1?category=Realistic
 | tags        | string[] |                                 |
 
 ## Known issues
-- `/photos/category/:id` — route param `:id` declared but never used; category comes from `?category=` query instead. Confusing route shape, consider `/photos/category?name=` or actually filter by `:id`.
 - All data static/in-memory (`categories.json`, `photos.json`) — no create/update/delete endpoints.

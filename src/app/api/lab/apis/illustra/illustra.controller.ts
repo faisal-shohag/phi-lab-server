@@ -37,26 +37,26 @@ export const getSinglePhoto = (req: Request, res: Response) => {
     });
 };
 
-//get news by category id
+//get photos by category id
 export const getPhotosByCategoryName = (req: Request, res: Response) => {
-    const category = req.query.category as string | undefined;
+    const { id } = req.params;
+    const category = categories.find((c) => c.id === Number(id));
     if(!category) {
         return res.status(404).json({
             status: "error",
-            message: `Please provide a category name`,
+            message: `No category found with id ${id}`,
         });
     }
-    const photosByCategory = photos.filter((n) => n.category.toLowerCase() == category.toLowerCase());
-    // console.log(newsByCategory)
+    const photosByCategory = photos.filter((n) => n.category.toLowerCase() == category.name.toLowerCase());
     if(photosByCategory.length === 0) {
         return res.status(404).json({
             status: "error",
-            message: `No photo found with categoryName ${category}`,
+            message: `No photo found with categoryId ${id}`,
         });
     }
     return res.status(200).json({
         status: "success",
-        message: `Photos with categoryName ${category} fetched successfully`,
+        message: `Photos with categoryId ${id} fetched successfully`,
         data: photosByCategory,
     });
 
