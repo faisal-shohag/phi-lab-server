@@ -9,6 +9,30 @@ Source: `src/app/api/lab/apis/illustra/`
 - Routes: `lab.route.ts`
 - Data: `categories.json`, `photos.json`
 
+## Data Shapes
+
+### Category
+| Field | Type   |
+|-------|--------|
+| id    | number |
+| name  | string |
+| slug  | string |
+
+### Photo
+| Field       | Type     | Notes                          |
+|-------------|----------|---------------------------------|
+| id          | number   |                                 |
+| title       | string   |                                 |
+| imageUrl    | string   | external image URL              |
+| prompt      | string   | AI generation prompt            |
+| category    | string   | matches a Category `name`       |
+| model       | string   | e.g. `"SDXL"`                    |
+| resolution  | string   | e.g. `"768x1024"`                |
+| likes       | number   |                                 |
+| downloads   | number   |                                 |
+| createdAt   | string   | ISO 8601 timestamp              |
+| tags        | string[] |                                 |
+
 ## Endpoints
 
 ### GET `/photos/categories`
@@ -87,30 +111,3 @@ Filter photos by category `id`. Looks up the category by `id`, then matches phot
 ```
 GET /api/v1/lab/photos/category/7
 ```
-
-## Data Shapes
-
-### Category
-| Field | Type   |
-|-------|--------|
-| id    | number |
-| name  | string |
-| slug  | string |
-
-### Photo
-| Field       | Type     | Notes                          |
-|-------------|----------|---------------------------------|
-| id          | number   |                                 |
-| title       | string   |                                 |
-| imageUrl    | string   | external image URL              |
-| prompt      | string   | AI generation prompt            |
-| category    | string   | matches a Category `name`       |
-| model       | string   | e.g. `"SDXL"`                    |
-| resolution  | string   | e.g. `"768x1024"`                |
-| likes       | number   |                                 |
-| downloads   | number   |                                 |
-| createdAt   | string   | ISO 8601 timestamp              |
-| tags        | string[] |                                 |
-
-## Known issues
-- All data static/in-memory (`categories.json`, `photos.json`) — no create/update/delete endpoints.
