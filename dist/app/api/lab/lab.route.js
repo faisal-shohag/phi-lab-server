@@ -9,6 +9,7 @@ const lab_controller_1 = require("./lab.controller");
 const dragon_news_controller_1 = require("./apis/dragon-news/dragon-news.controller");
 const sheet_controller_1 = require("./sheet/sheet.controller");
 const illustra_controller_1 = require("./apis/illustra/illustra.controller");
+const books_controller_1 = require("./apis/books/books.controller");
 const router = express_1.default.Router();
 router.get('/issues', lab_controller_1.gitIssueController.gitAllIssueController);
 router.get('/issue/:id', lab_controller_1.gitIssueController.getIssueByIdController);
@@ -27,6 +28,11 @@ router.get('/photos/categories', illustra_controller_1.IllustraController.getCat
 router.get('/photos', illustra_controller_1.IllustraController.getPhotos);
 router.get('/photos/:id', illustra_controller_1.IllustraController.getSinglePhoto);
 router.get('/photos/category/:id', illustra_controller_1.IllustraController.getPhotosByCategoryName);
+//books
+router.get('/books/categories', books_controller_1.BooksController.getCategories);
+router.get('/books', books_controller_1.BooksController.getBooks);
+router.get('/books/:id', books_controller_1.BooksController.getSingleBook);
+router.get('/books/category/:category', books_controller_1.BooksController.getBooksByCategory);
 // sheet-router
 router.post('/extract-job', sheet_controller_1.sheetsController.extractJobStructuredData);
 router.post("/sheets", sheet_controller_1.sheetsController.addData);

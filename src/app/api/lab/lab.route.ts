@@ -3,6 +3,7 @@ import { foodController, gitIssueController } from "./lab.controller";
 import { DragonNewsController } from "./apis/dragon-news/dragon-news.controller";
 import { sheetsController } from "./sheet/sheet.controller";
 import { IllustraController } from "./apis/illustra/illustra.controller";
+import { BooksController } from "./apis/books/books.controller";
 const router = express.Router();
 
 router.get('/issues', gitIssueController.gitAllIssueController)
@@ -26,6 +27,12 @@ router.get('/photos/categories', IllustraController.getCategories)
 router.get('/photos', IllustraController.getPhotos)
 router.get('/photos/:id', IllustraController.getSinglePhoto)
 router.get('/photos/category/:id', IllustraController.getPhotosByCategoryName)
+
+//books
+router.get('/books/categories', BooksController.getCategories)
+router.get('/books', BooksController.getBooks)
+router.get('/books/:id', BooksController.getSingleBook)
+router.get('/books/category/:category', BooksController.getBooksByCategory)
 
 
 // sheet-router
