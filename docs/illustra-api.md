@@ -3,7 +3,7 @@
 AI-art gallery API. 
 
 Base URL: `/api/v1/lab`
-Deployed: https://phi-lab-server.vercel.app/api/v1/lab
+Deployed: https://phi-lab-server-three.vercel.app/api/v1/lab
 Source: `src/app/api/lab/apis/illustra/`
 - Controller: `illustra.controller.ts`
 - Routes: `lab.route.ts`
